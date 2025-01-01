@@ -1,0 +1,44 @@
+name: Validate Balatro Mods
+
+on:
+  pull_request:
+    paths:
+      - "mods/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Check Required Files
+        run: |
+          # This for-loop iterates over each directory in mods/
+          # to ensure description.md and meta.json exist.
+          for dir in mods/*/; do
+            MOD_DIR="$(basename "$dir")"
+
+            if [ ! -f "$dir/description.md" ]; then
+              echo "Error: Missing description.md in $MOD_DIR"
+              exit 1
+            fi
+
+            if [ ! -f "$dir/meta.json" ]; then
+              echo "Error: Missing meta.json in $MOD_DIR"
+              exit 1
+            fi
+          done
+
+      - name: Validate JSON Format
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_JSON: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate Meta.json Against Schema
+        uses: ajv-validator/ajv-cli-action@v1
+        with:
+          schema: "./schema/meta.schema.json"
+          files: "mods/*/meta.json"
+
