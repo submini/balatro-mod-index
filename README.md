@@ -1,3 +1,4 @@
+# Balatro Mod Index Guide
 This guide explains how to structure and publish your Balatro mods in the *Balatro Mod Index* repository. Follow the instructions below carefully to ensure your mod is properly added.
 
 ## Directory Structure
