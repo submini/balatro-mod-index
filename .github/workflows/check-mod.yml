@@ -49,9 +49,9 @@ jobs:
                 WIDTH=$(echo "$DIMENSIONS" | cut -dx -f1)
                 HEIGHT=$(echo "$DIMENSIONS" | cut -dx -f2)
 
-                # If thumbnail exceeds 1920x500, exit with error
+                # Check if dimensions exceed 1920x500
                 if [ "$WIDTH" -gt 1920 ] || [ "$HEIGHT" -gt 500 ]; then
-                  echo "Error: Thumbnail in $MOD_DIR exceeds the 1920×500 recommended size."
+                  echo "Error: Thumbnail in $MOD_DIR exceeds the recommended size of 1920×500."
                   exit 1
                 fi
               fi
@@ -64,9 +64,9 @@ jobs:
           VALIDATE_JSON: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Validate Meta.json Against Schema
-        uses: ajv-validator/ajv-cli-action@v1
+      - name: Validate meta.json Against Schema
+        uses: dsanders11/json-schema-validate-action@v1
         with:
           schema: "./schema/meta.schema.json"
-          files: "mods/*/meta.json"
+          file: "mods/*/meta.json"
 
