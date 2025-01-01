@@ -50,14 +50,8 @@ If included, this image will appear alongside your mod in the index. Maximum and
 
 ## How to Publish
 
-1. **Clone the Balatro Mod Index Repository**  
-   Clone the repository to your local machine and create a new branch for your mod by running:
-   ```bash
-    git clone https://github.com/skyline69/balatro-mod-index.git
-    cd balatro-mod-index
-    git checkout -b add-<modname>
-   ```
-   > Replace `<modname>` with your mod’s name (e.g., `add-pokermon`).
+1. **Fork the Balatro Mod Index Repository**  
+   Go to the main Balatro Mod Index repository on GitHub and click **Fork** to create your own copy.
 
 2. **Create a New Mod Directory**  
    Under `mods/`, add a folder named `Author@Modname` (e.g., `InertSteak@Pokermon`).  
@@ -72,12 +66,12 @@ If included, this image will appear alongside your mod in the index. Maximum and
 4. Populate `meta.json`
 
 5. **Commit and Push**  
-Commit your new folder and files in your fork’s `mods/` directory, then push your changes to GitHub.
+Commit your directory and files, then push them to your fork.
 
 6. **Open a Pull Request (PR)**  
-Go to the **Balatro Mod Index** repository on GitHub and open a new PR.
-- **PR Title**: “Add Author@Modname mod”  
-- **Description**: Briefly describe your mod.
+From your fork, open a Pull Request to the main repository’s default branch (e.g., `main`):  
+- **Title**: *“Add Author@Modname mod”*  
+- **Description**: Briefly describe your mod’s purpose or any extra details.
 
 7. **Automated Checks**  
 As soon as you open the PR, GitHub Actions runs the automated checks to ensure your mod meets the required standards. If any checks fail, you will need to address the issues before your PR can be merged.
@@ -86,7 +80,7 @@ As soon as you open the PR, GitHub Actions runs the automated checks to ensure y
 A project maintainer or designated reviewer will review your PR to confirm it meets ethical, technical, and overall quality standards.
 
 9. **Merge**  
-Once the reviewer approves and your automated checks have passed, your mod will be merged into the **Balatro Mod Index**!
+Once the automated checks and manual review pass, your PR will be merged. Your mod then becomes part of the **Balatro Mod Index**!
 
 Once your submission is reviewed and approved, your mod will be added to the Balatro Mod Index!
 
