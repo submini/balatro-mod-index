@@ -1,4 +1,5 @@
 # Balatro Mod Index Guide
+![Balatro Image](https://github.com/skyline69/balatro-mod-index/blob/main/media/Balatro.jpg?raw=true)
 This guide explains how to structure and publish your Balatro mods in the *Balatro Mod Index* repository. Follow the instructions below carefully to ensure your mod is properly added.
 
 ## Directory Structure
