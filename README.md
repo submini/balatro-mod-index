@@ -45,7 +45,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 - **repo**: A link to your mod’s repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
 
-### 3. thumbnail.png (Optional)
+### 3. thumbnail.jpg (Optional)
 If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920 × 500 pixels.
 
 ## How to Publish

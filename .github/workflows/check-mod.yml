@@ -41,7 +41,7 @@ jobs:
           for dir in mods/*/; do
             if [ -d "$dir" ]; then
               MOD_DIR="$(basename "$dir")"
-              THUMBNAIL="$dir/thumbnail.png"
+              THUMBNAIL="$dir/thumbnail.jpg"
 
               if [ -f "$THUMBNAIL" ]; then
                 # Extract width and height using ImageMagick
