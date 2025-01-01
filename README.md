@@ -39,7 +39,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 ```
 
 - **title**: The name of your mod.
-- **mod-loader**: Must be either `steamodded` or `balamod`.
+- **mod-loader**: Must be either `steamodded` or `lovely-only`.
 - **category**: Must be one of `Gameplay`, `UI`, or `Card Mods`.
 - **author**: Your chosen username or handle.
 - **repo**: A link to your mod’s repository.
