@@ -70,3 +70,4 @@ jobs:
           schema: "./schema/meta.schema.json"
           files: |
             mods/*/meta.json
+
