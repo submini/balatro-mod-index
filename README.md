@@ -31,7 +31,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 {
   "title": "Extended Cards",
   "requires-steamodded": true,
-  "category": "Gameplay",
+  "category": "Content",
   "author": "Joe Mama",
   "repo": "https://github.com/joemama/extended-cards",
   "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.tar.gz"
