@@ -12,21 +12,49 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
       - name: Check Required Files
         run: |
-          # This for-loop iterates over each directory in mods/
-          # to ensure description.md and meta.json exist.
           for dir in mods/*/; do
-            MOD_DIR="$(basename "$dir")"
+            if [ -d "$dir" ]; then
+              MOD_DIR="$(basename "$dir")"
 
-            if [ ! -f "$dir/description.md" ]; then
-              echo "Error: Missing description.md in $MOD_DIR"
-              exit 1
+              # Ensure description.md and meta.json exist
+              if [ ! -f "$dir/description.md" ]; then
+                echo "Error: Missing description.md in $MOD_DIR"
+                exit 1
+              fi
+
+              if [ ! -f "$dir/meta.json" ]; then
+                echo "Error: Missing meta.json in $MOD_DIR"
+                exit 1
+              fi
             fi
+          done
 
-            if [ ! -f "$dir/meta.json" ]; then
-              echo "Error: Missing meta.json in $MOD_DIR"
-              exit 1
+      - name: Check Thumbnail Dimensions
+        run: |
+          for dir in mods/*/; do
+            if [ -d "$dir" ]; then
+              MOD_DIR="$(basename "$dir")"
+              THUMBNAIL="$dir/thumbnail.png"
+
+              if [ -f "$THUMBNAIL" ]; then
+                # Extract width and height using ImageMagick
+                DIMENSIONS=$(identify -format "%wx%h" "$THUMBNAIL")
+                WIDTH=$(echo "$DIMENSIONS" | cut -dx -f1)
+                HEIGHT=$(echo "$DIMENSIONS" | cut -dx -f2)
+
+                # If thumbnail exceeds 1920x500, exit with error
+                if [ "$WIDTH" -gt 1920 ] || [ "$HEIGHT" -gt 500 ]; then
+                  echo "Error: Thumbnail in $MOD_DIR exceeds the 1920×500 recommended size."
+                  exit 1
+                fi
+              fi
             fi
           done
 
