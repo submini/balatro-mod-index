@@ -68,5 +68,5 @@ jobs:
         uses: dsanders11/json-schema-validate-action@v1.2.0
         with:
           schema: "./schema/meta.schema.json"
-          file: "mods/*/meta.json"
-
+          files: |
+            mods/*/meta.json
