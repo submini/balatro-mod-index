@@ -7,7 +7,7 @@ This guide explains how to structure and publish your Balatro mods in the *Balat
 Your mod should have the following structure inside the `mods/` directory:
 - mods/
     - Author@Modname/
-        - thumbnail.png (optional but preferred)
+        - thumbnail.jpg (optional but preferred)
         - description.md (required)
         - meta.json (required)
 
@@ -16,7 +16,7 @@ For a mod titled "Pokermon" by "InertSteak":
 
 - mods/
     - InertSteak@Pokermon/
-        - thumbnail.png
+        - thumbnail.jpg
         - description.md
         - meta.json
 
