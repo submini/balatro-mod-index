@@ -30,7 +30,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 ```json
 {
   "title": "Extended Cards",
-  "mod-loader": "steamodded",
+  "requires-steamodded": true,
   "category": "Gameplay",
   "author": "Joe Mama",
   "repo": "https://github.com/joemama/extended-cards",
@@ -39,8 +39,8 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 ```
 
 - **title**: The name of your mod.
-- **mod-loader**: Must be either `steamodded` or `lovely-only`.
-- **category**: Must be one of `Gameplay`, `UI`, or `Card Mods`.
+- **requires-steamodded**: If your mod requires the Steamodded mod loader, set this to `true`.
+- **category**: Must be one of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
 - **author**: Your chosen username or handle.
 - **repo**: A link to your mod’s repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
