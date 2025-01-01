@@ -7,7 +7,7 @@
       "type": "string"
     },
     "requires-steamodded": {
-      "type": "boolean",
+      "type": "boolean"
     },
     "category": {
       "type": "string",
