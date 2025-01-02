@@ -25,6 +25,6 @@
       "format": "uri"
     }
   },
-  "required": ["title", "mod-loader", "category", "author", "repo", "downloadURL"]
+  "required": ["title", "requires-steamodded", "category", "author", "repo", "downloadURL"]
 }
 
