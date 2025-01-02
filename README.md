@@ -58,7 +58,7 @@ If included, this image will appear alongside your mod in the index. Maximum and
    Inside it, include:  
    - `description.md` (**required**)  
    - `meta.json` (**required**)  
-   - `thumbnail.png` (optional but recommended)
+   - `thumbnail.jpg` (optional but recommended)
 
 3. **Write Your Mod Description**  
    Use `description.md` to explain what your mod does, key features, and any usage instructions.
