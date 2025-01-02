@@ -30,6 +30,6 @@
       "format": "uri"
     }
   },
-  "required": ["title", "requires-steamodded", "category", "author", "repo", "downloadURL"]
+  "required": ["title", "requires-steamodded", "categories", "author", "repo", "downloadURL"]
 }
 
