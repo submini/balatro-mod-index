@@ -42,11 +42,11 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 - **requires-steamodded**: If your mod requires the Steamodded mod loader, set this to `true`.
 - **categories**: Must be of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
 - **author**: Your chosen username or handle.
-- **repo**: A link to your mod’s repository.
+- **repo**: A link to your mod's repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
 
 ### 3. thumbnail.jpg (Optional)
-If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920 × 1080 pixels.
+If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920x1080 pixels.
 
 ## How to Publish
 
@@ -69,9 +69,9 @@ If included, this image will appear alongside your mod in the index. Maximum and
 Commit your directory and files, then push them to your fork.
 
 6. **Open a Pull Request (PR)**  
-From your fork, open a Pull Request to the main repository’s default branch (e.g., `main`):  
-- **Title**: *“Add Author@Modname mod”*  
-- **Description**: Briefly describe your mod’s purpose or any extra details.
+From your fork, open a Pull Request to the main repository's default branch (e.g., `main`):  
+- **Title**: *"Add Author@Modname mod"*  
+- **Description**: Briefly describe your mod's purpose or any extra details.
 
 7. **Automated Checks**  
 As soon as you open the PR, GitHub Actions runs the automated checks to ensure your mod meets the required standards. If any checks fail, you will need to address the issues before your PR can be merged.
