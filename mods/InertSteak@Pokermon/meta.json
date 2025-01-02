@@ -1,7 +1,7 @@
 {
   "title": "Pokermon",
   "requires-steamodded": true,
-  "category": "Content",
+  "categories": ["Content"],
   "author": "InertSteak",
   "repo":"https://github.com/InertSteak/Pokermon",
   "downloadURL": "https://github.com/InertSteak/Pokermon/archive/refs/tags/2.1.0b.tar.gz"

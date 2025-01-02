@@ -1,7 +1,7 @@
 {
     "title": "Six Suits",
     "requires-steamodded": true,
-    "category": "Content",
+    "categories": ["Content"],
     "author": "Aure",
     "repo":"https://github.com/Aurelius7309/SixSuits",
     "downloadURL": "https://github.com/Aurelius7309/SixSuits/archive/refs/heads/master.zip"

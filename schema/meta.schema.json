@@ -9,9 +9,14 @@
     "requires-steamodded": {
       "type": "boolean"
     },
-    "category": {
-      "type": "string",
-      "enum": ["Content", "Joker", "Quality of Life", "Technical", "Miscellaneous", "Resource Packs", "API"]
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Content", "Joker", "Quality of Life", "Technical", "Miscellaneous", "Resource Packs", "API"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "author": {
       "type": "string"

@@ -31,7 +31,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 {
   "title": "Extended Cards",
   "requires-steamodded": true,
-  "category": "Content",
+  "categories": ["Content"],
   "author": "Joe Mama",
   "repo": "https://github.com/joemama/extended-cards",
   "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.tar.gz"
@@ -40,7 +40,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 
 - **title**: The name of your mod.
 - **requires-steamodded**: If your mod requires the Steamodded mod loader, set this to `true`.
-- **category**: Must be one of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
+- **categories**: Must be of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
 - **author**: Your chosen username or handle.
 - **repo**: A link to your mod’s repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
@@ -58,7 +58,7 @@ If included, this image will appear alongside your mod in the index. Maximum and
    Inside it, include:  
    - `description.md` (**required**)  
    - `meta.json` (**required**)  
-   - `thumbnail.png` (optional but recommended)
+   - `thumbnail.jpg` (optional but recommended)
 
 3. **Write Your Mod Description**  
    Use `description.md` to explain what your mod does, key features, and any usage instructions.
