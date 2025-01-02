@@ -49,9 +49,9 @@ jobs:
                 WIDTH=$(echo "$DIMENSIONS" | cut -dx -f1)
                 HEIGHT=$(echo "$DIMENSIONS" | cut -dx -f2)
 
-                # Check if dimensions exceed 1920x500
-                if [ "$WIDTH" -gt 1920 ] || [ "$HEIGHT" -gt 500 ]; then
-                  echo "Error: Thumbnail in $MOD_DIR exceeds the recommended size of 1920×500."
+                # Check if dimensions exceed 1920x1080
+                if [ "$WIDTH" -gt 1920 ] || [ "$HEIGHT" -gt 1080 ]; then
+                  echo "Error: Thumbnail in $MOD_DIR exceeds the recommended size of 1920×1080."
                   exit 1
                 fi
               fi
