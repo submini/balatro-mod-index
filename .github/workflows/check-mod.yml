@@ -71,6 +71,29 @@ jobs:
           files: |
             mods/*/meta.json
 
+      - name: Validate Download URLs
+        run: |
+          for dir in mods/*/; do
+            if [ -d "$dir" ]; then
+              MOD_DIR="$(basename "$dir")"
+              META_JSON="$dir/meta.json"
+              
+              # Check if downloadURL exists and is not empty
+              DOWNLOAD_URL=$(jq -r '.downloadURL // empty' "$META_JSON")
+              if [ -z "$DOWNLOAD_URL" ]; then
+                echo "Error: Missing or empty downloadURL in $MOD_DIR/meta.json"
+                exit 1
+              fi
+              
+              # Optional: Check if URL is accessible
+              if ! curl --output /dev/null --silent --head --fail "$DOWNLOAD_URL"; then
+                echo "Error: downloadURL in $MOD_DIR/meta.json is not accessible"
+                exit 1
+              fi
+            fi
+          done
+
+
   review-and-approve:
       needs: validate  # This job will only run after 'validate' completes successfully.
       runs-on: ubuntu-latest
