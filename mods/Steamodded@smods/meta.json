@@ -1,0 +1,8 @@
+{
+  "title": "Steamodded",
+  "requires-steamodded": false,
+  "categories": ["Technical"],
+  "author": "Steamodded",
+  "repo":"https://github.com/Steamodded/smods",
+  "downloadURL": "https://github.com/Steamodded/smods/archive/refs/heads/main.zip"
+}
