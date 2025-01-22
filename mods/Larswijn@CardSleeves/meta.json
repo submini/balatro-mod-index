@@ -1,6 +1,7 @@
 {
   "title": "CardSleeves",
   "requires-steamodded": true,
+  "requires-talisman": false,
   "categories": ["Content"],
   "author": "Larswijn",
   "repo": "https://github.com/larswijn/CardSleeves",

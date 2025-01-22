@@ -1,6 +1,7 @@
 {
     "title": "Flower Pot",
     "requires-steamodded": false,
+	"requires-talisman": false,
     "categories": ["Technical"],
     "author": "ItsFlowwey",
     "repo":"https://github.com/GauntletGames-2086/Flower-Pot",

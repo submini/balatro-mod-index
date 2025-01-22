@@ -1,6 +1,7 @@
 {
   "title": "Pokermon",
   "requires-steamodded": true,
+  "requires-talisman": false,
   "categories": ["Content"],
   "author": "InertSteak",
   "repo":"https://github.com/InertSteak/Pokermon",

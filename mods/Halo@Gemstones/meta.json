@@ -1,6 +1,7 @@
 {
     "title": "Gemstones",
     "requires-steamodded": true,
+	"requires-talisman": false,
     "categories": ["Content"],
     "author": "Halo / OfficialHalo",
     "repo": "https://github.com/0fficialHalo/Gemstones",

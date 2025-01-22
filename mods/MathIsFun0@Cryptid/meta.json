@@ -1,6 +1,7 @@
 {
   "title": "Cryptid",
   "requires-steamodded": true,
+  "requires-talisman": true,
   "categories": ["Content"],
   "author": "MathIsFun0",
   "repo":"https://github.com/MathIsFun0/Cryptid",

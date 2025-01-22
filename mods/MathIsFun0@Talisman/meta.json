@@ -1,6 +1,7 @@
 {
   "title": "Talisman",
   "requires-steamodded": true,
+  "requires-talisman": false,
   "categories": ["API", "Technical", "Quality of Life"],
   "author": "MathIsFun0",
   "repo":"https://github.com/MathIsFun0/Talisman",

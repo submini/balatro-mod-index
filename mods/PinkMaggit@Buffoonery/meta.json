@@ -1,6 +1,7 @@
 {
     "title": "Buffoonery",
     "requires-steamodded": true,
+    "requires-talisman": true,
     "categories": ["Content"],
     "author": "PinkMaggit",
     "repo":"https://github.com/pinkmaggit-hub/Buffoonery",

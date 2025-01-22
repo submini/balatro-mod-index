@@ -1,6 +1,7 @@
 {
   "title": "Multiplayer",
   "requires-steamodded": true,
+  "requires-talisman": false,
   "categories": ["Content", "Technical", "Miscellaneous"],
   "author": "Virtualized",
   "repo": "https://github.com/V-rtualized/balatro-multiplayer",

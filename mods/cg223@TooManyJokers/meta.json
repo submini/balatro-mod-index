@@ -1,6 +1,7 @@
 {
     "title": "Too Many Jokers",
     "requires-steamodded": true,
+    "requires-talisman": false,
     "categories": ["Quality of Life"],
     "author": "cg223",
     "repo":"https://github.com/cg-223/toomanyjokers",

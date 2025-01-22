@@ -9,6 +9,9 @@
     "requires-steamodded": {
       "type": "boolean"
     },
+    "requires-talisman": {
+      "type": "boolean"
+    },
     "categories": {
       "type": "array",
       "items": {
