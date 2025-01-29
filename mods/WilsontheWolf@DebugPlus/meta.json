@@ -1,0 +1,9 @@
+{
+    "title": "DebugPlus",
+    "requires-steamodded": false,
+    "requires-talisman": false,
+    "categories": ["Technical"],
+    "author": "WilsontheWolf",
+    "repo":"https://github.com/Eremel/Galdur",
+    "downloadURL": "https://github.com/Eremel/Galdur/archive/refs/heads/master.zip"
+  }

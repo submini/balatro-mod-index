@@ -1,0 +1,9 @@
+{
+    "title": "Galdur",
+    "requires-steamodded": true,
+    "requires-talisman": false,
+    "categories": ["Content"],
+    "author": "Eremel",
+    "repo":"https://github.com/Eremel/Galdur",
+    "downloadURL": "https://github.com/Eremel/Galdur/archive/refs/heads/master.zip"
+}
