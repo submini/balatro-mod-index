@@ -1,4 +1,5 @@
-# Paperback :: Jokers & Consumables :: Steamodded v1.0.0+
+# Paperback
+> this mod requires Steamodded v1.0.0+
 
 A vanilla centered mod built upon expanding the base game (original idea and art by PaperMoon)
 
