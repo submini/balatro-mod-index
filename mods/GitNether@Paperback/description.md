@@ -8,6 +8,6 @@ Take a look at the [Wiki Page](https://balatromods.miraheze.org/wiki/Paperback) 
 
 See [spreadsheet with progress](https://docs.google.com/spreadsheets/d/0PASVdFEUthutKjdsQ8aZ0w863nwBcSf285EYwWuR1lQ/edit?usp=sharing) to see all the content that is currently planned for the mod!
 
-See [Releases](https://github.com/GitNether/paperback/releases) for the official working releases.
+<!-- See [Releases](https://github.com/GitNether/paperback/releases) for the official working releases. -->
 
-For the alpha-pre-release-testing-proceed-at-your-own-risk version, simply [download the .zip from the beta branch](https://github.com/GitNether/paperback/archive/refs/heads/beta.zip) or clone the beta branch for easy updating in the future.
+<!-- For the alpha-pre-release-testing-proceed-at-your-own-risk version, simply [download the .zip from the beta branch](https://github.com/GitNether/paperback/archive/refs/heads/beta.zip) or clone the beta branch for easy updating in the future. -->
