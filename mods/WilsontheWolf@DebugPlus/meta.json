@@ -4,6 +4,6 @@
     "requires-talisman": false,
     "categories": ["Technical"],
     "author": "WilsontheWolf",
-    "repo":"https://github.com/Eremel/Galdur",
-    "downloadURL": "https://github.com/Eremel/Galdur/archive/refs/heads/master.zip"
+    "repo":"https://github.com/WilsontheWolf/DebugPlus",
+    "downloadURL": "https://github.com/WilsontheWolf/DebugPlus/releases/latest/download/DebugPlus.zip"
   }
