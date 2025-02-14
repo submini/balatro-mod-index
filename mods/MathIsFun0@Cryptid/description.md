@@ -1,10 +1,6 @@
 # Cryptid
-An unbalanced Balatro mod.
+**Cryptid** is a Balatro mod that disregards the notion of game balance, adding various overpowered content for the player to use, and various difficult challenges to face.
 
-Note: Cryptid requires **Steamodded **1.0.0-Alpha** and **Talisman**.
+### [Official Discord](https://discord.gg/unbalanced)
 
-### [Official Discord](https://discord.gg/eUf9Ur6RyB)
-
-
-### Frequently asked questions
-* Credit to @jenwalter666 for creating this FAQ (forwarded from Cryptid Discord)
+> Note: The version of Cryptid bundled with BMM is experimental, and you will likely encounter bugs. You are highly encouraged to report these bugs to the "Refactor Branch Bugs" post in the Cryptid Discord's #bug-reports channel.
