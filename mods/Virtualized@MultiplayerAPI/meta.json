@@ -1,0 +1,9 @@
+{
+  "title": "Multiplayer API",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["API", "Technical", "Miscellaneous"],
+  "author": "Virtualized",
+  "repo": "https://github.com/V-rtualized/BalatroMultiplayerAPI",
+  "downloadURL": "https://github.com/V-rtualized/BalatroMultiplayerAPI/archive/refs/heads/main.zip"
+}
