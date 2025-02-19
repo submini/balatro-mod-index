@@ -1,6 +1,6 @@
 {
     "title": "HandyBalatro",
-    "requires-steamodded": true,
+    "requires-steamodded": false,
     "requires-talisman": false,
     "categories": ["Quality of Life"],
     "author": "SleepyG11",
