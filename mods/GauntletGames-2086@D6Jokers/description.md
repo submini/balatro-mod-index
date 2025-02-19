@@ -1,1 +1,1 @@
-Adds the enhancement "X Card" to the game. X Cards have wild ranks, but two X Cards in the same hand cannot mimic the same rank
+Adds a bunch of jokers to the game with effects based off the roll of a D6
