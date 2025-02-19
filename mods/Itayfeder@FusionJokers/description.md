@@ -1,2 +1,1 @@
-Adds a joker based off of... Emergence.
-I'm not joking.
+Adds the ability to fuse jokers into new, powerful cards!
