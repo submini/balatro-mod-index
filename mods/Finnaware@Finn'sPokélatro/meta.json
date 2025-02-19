@@ -1,0 +1,9 @@
+{
+    "title": "Finn's Pokélatro",
+    "requires-steamodded": true,
+    "requires-talisman": false,
+    "categories": ["Resource Packs"],
+    "author": "Finnaware",
+    "repo":"https://github.com/Finnaware/Finn-Pokelatro",
+    "downloadURL": "https://github.com/Finnaware/Finn-Pokelatro/archive/refs/heads/main.zip"
+}
