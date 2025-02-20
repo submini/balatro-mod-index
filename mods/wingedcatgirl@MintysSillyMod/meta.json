@@ -1,0 +1,10 @@
+{
+    "title": "Minty's Silly Little Mod",
+    "requires-steamodded": true,
+    "requires-talisman": true,
+    "categories": ["Content"],
+    "author": "wingedcatgirl",
+    "repo": "https://github.com/wingedcatgirl/MintysSillyMod",
+    "downloadURL": "https://github.com/wingedcatgirl/MintysSillyMod"
+  }
+  
