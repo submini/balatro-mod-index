@@ -1,7 +1,7 @@
 {
 	"title": "TOGA's Stuff",
 	"requires-steamodded": true,
-	"requires-talisman": true,
+	"requires-talisman": false,
 	"categories": ["Content", "Joker"],
 	"author": "TheOneGoofAli",
 	"repo": "https://github.com/TheOneGoofAli/TOGAPackBalatro",
