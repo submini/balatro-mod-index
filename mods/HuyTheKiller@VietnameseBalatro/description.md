@@ -1,2 +1,2 @@
 # Vietnamese Balatro 🇻🇳
-Adds Vietnamese localization to Balatro. Supports CardSleeves, Cryptid, Galdur, Incantation, JokerDisplay, Multiplayer and Ortalab.
+Adds Vietnamese localization to Balatro. See the in-game description to know which mods also support Vietnamese.
