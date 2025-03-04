@@ -1,6 +1,6 @@
 # Balajeweled
 A resource pack that replaces the playing cards' suits into gems from the Bejeweled series.  
 
-As of now, only the numbered cards of all suits are changed, along with some enhancements.  
+As of v0.1.2, the face cards had their letters and suit icons changed, to better align with the other cards.
 
 **REQUIRES STEAMODDED**
