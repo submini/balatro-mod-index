@@ -1,0 +1,9 @@
+{
+  "title": "Mistigris",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["Content", "Joker"],
+  "author": "astrapboy",
+  "repo": "https://github.com/astrapboy/Mistigris",
+  "downloadURL": "https://github.com/astrapboy/Mistigris/archive/refs/heads/main.zip"
+}
