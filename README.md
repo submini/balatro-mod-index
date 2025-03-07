@@ -42,12 +42,12 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 ```
 - **title**: The name of your mod.
 - **requires-steamodded**: If your mod requires the [Steamodded](https://github.com/Steamodded/smods) mod loader, set this to `true`.
+- *requires-talisman*: (*Optional*) If your mod requires the [Talisman](https://github.com/MathIsFun0/Talisman) mod, set this to `true`.
 - **categories**: Must contain at least one of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
 - **author**: Your chosen username or handle.
 - **repo**: A link to your mod's repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
-- *requires-talisman*: (*Optional*) If your mod requires the [Talisman](https://github.com/MathIsFun0/Talisman) mod, set this to `true`.
-- *folderName*: (*Optional*) The name for the mod's install folder. This must not contain any forbidden characters: `<` `>` `:` `"` `/` `\` `|` `?` `*`
+- *folderName*: (*Optional*) The name for the mod's install folder. This must not contain any of the filename-forbidden characters: `<` `>` `:` `"` `/` `\` `|` `?` `*`
 
 ### 3. thumbnail.jpg (Optional)
 If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920x1080 pixels.
