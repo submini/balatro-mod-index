@@ -47,7 +47,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 - **author**: Your chosen username or handle.
 - **repo**: A link to your mod's repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
-- *folderName*: (*Optional*) The name for the mod's install folder. This must not contain any of the filename-forbidden characters: `<` `>` `:` `"` `/` `\` `|` `?` `*`
+- *folderName*: (*Optional*) The name for the mod's install folder. This must not contain characters `<` `>` `:` `"` `/` `\` `|` `?` `*`
 
 ### 3. thumbnail.jpg (Optional)
 If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920x1080 pixels.
