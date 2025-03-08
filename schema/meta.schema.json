@@ -31,6 +31,10 @@
     "downloadURL": {
       "type": "string",
       "format": "uri"
+    },
+    "folderName": {
+      "type": "string",
+      "pattern": "^[^<>:\"/\\|?*]+$"
     }
   },
   "required": ["title", "requires-steamodded", "categories", "author", "repo", "downloadURL"]
