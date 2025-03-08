@@ -1,15 +1,11 @@
 # A Balatro Multiplayer Mod
 
-This is an **WIP** Balatro multiplayer mod developed by virtualized.
+Compete with your friends in Balatro! Developed by Virtualized.
 
 ## How it works
 
-For the most popular gamemode, each player will play the small and big blinds normally, and each boss blind will be a PvP blind where you are trying to beat the other player's score. You won't lose when you fail a blind but you will lose a life every time you lose to the other person, and there are lobby options set by the lobby host to modify how the gamemodes work or change the amount of lives each player has.
+Join a lobby with a friend, some blinds will be replaced with PvP Blinds where you must score higher than your opponent or lose a life!
 
 ## Do I need to start a server to play with my friends?
 
-No, there is an official server that you will automatically connect to when you start the game with the mod installed, although if you can host one yourself if you want to
-
-## Join the discord server below to get help and find people to play with:
-
-https://discord.gg/W22FEqVWsq
+No, there is an official server that you will automatically connect to when you start the game with the mod installed, although you can host one yourself if you want to ([download the server files here](https://github.com/V-rtualized/BalatroMultiplayerAPI-Server)). You can also find random people to play with by joining the Balatro Multiplayer discord: https://discord.gg/W22FEqVWsq

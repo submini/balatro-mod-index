@@ -4,6 +4,6 @@
   "requires-talisman": false,
   "categories": ["Content", "Technical", "Miscellaneous"],
   "author": "Virtualized",
-  "repo": "https://github.com/V-rtualized/balatro-multiplayer",
-  "downloadURL": "https://github.com/V-rtualized/balatro-multiplayer/archive/refs/heads/main.zip"
+  "repo": "https://github.com/V-rtualized/BalatroMultiplayer",
+  "downloadURL": "https://github.com/V-rtualized/BalatroMultiplayer/releases/latest/download/BalatroMultiplayer.zip"
 }
