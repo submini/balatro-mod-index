@@ -35,6 +35,10 @@
     "folderName": {
       "type": "string",
       "pattern": "^[^<>:\"/\\|?*]+$"
+    },
+	"version": {
+      "type": "string",
+      "pattern": "^[^<>:\"/\\|?*]+$"
     }
   },
   "required": ["title", "requires-steamodded", "categories", "author", "repo", "downloadURL"]
