@@ -5,5 +5,6 @@
     "categories": ["Quality of Life", "Miscellaneous"],
     "author": "Sir. Gameboy",
     "repo": "https://github.com/Balin-P/Wilder",
-    "downloadURL": "https://github.com/Balin-P/Wilder/releases/download/Release/Wilder.zip"
+    "downloadURL": "https://github.com/Balin-P/Wilder/releases/download/Release/Wilder.zip",
+    "automatic-version-check": true
   }
