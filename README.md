@@ -36,7 +36,8 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
   "author": "Joe Mama",
   "repo": "https://github.com/joemama/extended-cards",
   "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.tar.gz",
-  "folderName": "ExtendedCards"
+  "folderName": "ExtendedCards",
+  "version": "1.0.0"
 }
 
 ```
@@ -48,6 +49,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 - **repo**: A link to your mod's repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
 - *folderName*: (*Optional*) The name for the mod's install folder. This must not contain characters `<` `>` `:` `"` `/` `\` `|` `?` `*`
+- *version*: (*Optional*, but **recommended**) The latest version of your mod.
 
 ### 3. thumbnail.jpg (Optional)
 If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920x1080 pixels.

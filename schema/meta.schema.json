@@ -37,8 +37,7 @@
       "pattern": "^[^<>:\"/\\|?*]+$"
     },
 	"version": {
-      "type": "string",
-      "pattern": "^[^<>:\"/\\|?*]+$"
+      "type": "string"
     }
   },
   "required": ["title", "requires-steamodded", "categories", "author", "repo", "downloadURL"]
