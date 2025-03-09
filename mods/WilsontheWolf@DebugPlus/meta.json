@@ -5,5 +5,6 @@
     "categories": ["Technical"],
     "author": "WilsontheWolf",
     "repo":"https://github.com/WilsontheWolf/DebugPlus",
-    "downloadURL": "https://github.com/WilsontheWolf/DebugPlus/releases/latest/download/DebugPlus.zip"
+    "downloadURL": "https://github.com/WilsontheWolf/DebugPlus/releases/latest/download/DebugPlus.zip",
+    "automatic-version-check": true
   }
