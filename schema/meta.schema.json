@@ -38,6 +38,9 @@
     },
 	"version": {
       "type": "string"
+    },
+	"automatic-version-check": {
+      "type": "boolean"
     }
   },
   "required": ["title", "requires-steamodded", "categories", "author", "repo", "downloadURL"]

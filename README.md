@@ -49,7 +49,8 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 - **repo**: A link to your mod's repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
 - *folderName*: (*Optional*) The name for the mod's install folder. This must not contain characters `<` `>` `:` `"` `/` `\` `|` `?` `*`
-- *version*: (*Optional*, but **recommended**) The latest version of your mod.
+- *version*: (*Optional*, but **recommended**, if `automatic-version-check` disabled) The latest version of your mod.
+- *automatic-version-check*: (*Optional*, but **recommended**) Gets the latest release from your mod's repository and updates the `version` field. If there is no release, it will check the latest commit. Set this parameter to `true`, to enable this feature. (Note: the index updates every hour)
 
 ### 3. thumbnail.jpg (Optional)
 If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920x1080 pixels.
