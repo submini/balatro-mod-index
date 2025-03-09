@@ -12,7 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        
+        with:
+          token: ${{ secrets.PAT_TOKEN }}  # Use PAT for checkout
+          
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -26,20 +28,11 @@ jobs:
       - name: Update mod versions
         run: |
           python .github/scripts/update_mod_versions.py
-      
-      - name: Generate App Token
-        id: generate_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.APP_PRIVATE_KEY }}
           
       - name: Commit and push changes
-        env:
-          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
-          git config --global user.name 'GitHub App'
-          git config --global user.email 'github-app[bot]@users.noreply.github.com'
+          git config --global user.name 'Version Update Bot'
+          git config --global user.email 'bot@noreply.github.com'
           
           if [[ $(git status --porcelain) ]]; then
             COMMIT_MSG="Auto-update mod versions"
@@ -49,7 +42,8 @@ jobs:
             
             git add mods/*/meta.json
             git commit -m "$COMMIT_MSG"
-            git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+            # Using the PAT_TOKEN with the default token URL format
+            git push
           else
             echo "No changes to commit"
           fi
