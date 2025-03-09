@@ -6,5 +6,6 @@
   "author": "MathIsFun0",
   "repo":"https://github.com/MathIsFun0/Cryptid",
   "downloadURL": "https://github.com/MathIsFun0/Cryptid/archive/refs/heads/main.zip",
-  "folderName": "Cryptid"
+  "folderName": "Cryptid",
+  "automatic-version-check": true
 }
