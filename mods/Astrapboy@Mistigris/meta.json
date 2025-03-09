@@ -5,5 +5,6 @@
   "categories": ["Content", "Joker"],
   "author": "astrapboy",
   "repo": "https://github.com/astrapboy/Mistigris",
-  "downloadURL": "https://github.com/astrapboy/Mistigris/archive/refs/heads/main.zip"
+  "downloadURL": "https://github.com/astrapboy/Mistigris/archive/refs/heads/main.zip",
+    "automatic-version-check": true
 }
