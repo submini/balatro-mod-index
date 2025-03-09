@@ -5,6 +5,7 @@
     "categories": ["Quality of Life"],
     "author": "Agoraaa",
     "repo": "https://github.com/Agoraaa/FlushHotkeys",
-    "downloadURL": "https://github.com/Agoraaa/FlushHotkeys/archive/refs/heads/main.zip"
+    "downloadURL": "https://github.com/Agoraaa/FlushHotkeys/archive/refs/heads/main.zip",
+    "automatic-version-check": true
   }
   

@@ -5,5 +5,6 @@
     "categories": ["Content"],
     "author": "dvrp0",
     "repo":"https://github.com/Bazinga9000/MathBlinds",
-    "downloadURL":"https://github.com/Bazinga9000/MathBlinds/archive/refs/heads/main.zip"
+    "downloadURL":"https://github.com/Bazinga9000/MathBlinds/archive/refs/heads/main.zip",
+    "automatic-version-check": true
 }
