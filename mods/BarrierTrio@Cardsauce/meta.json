@@ -5,5 +5,6 @@
   "categories": ["Content", "Joker", "Miscellaneous"],
   "author": "BarrierTrio & Keku",
   "repo": "https://github.com/BarrierTrio/Cardsauce",
-  "downloadURL": "https://github.com/BarrierTrio/Cardsauce/releases/latest/download/Cardsauce.zip"
+  "downloadURL": "https://github.com/BarrierTrio/Cardsauce/releases/latest/download/Cardsauce.zip",
+  "automatic-version-check": true
 }
