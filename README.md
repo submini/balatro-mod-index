@@ -37,7 +37,8 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
   "repo": "https://github.com/joemama/extended-cards",
   "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.tar.gz",
   "folderName": "ExtendedCards",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "automatic-version-check": true
 }
 
 ```
