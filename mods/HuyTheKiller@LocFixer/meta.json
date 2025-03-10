@@ -5,5 +5,8 @@
     "categories": ["Quality of Life", "Miscellaneous"],
     "author": "HuyTheKiller",
     "repo": "https://github.com/HuyTheKiller/LocFixer",
-    "downloadURL": "https://github.com/HuyTheKiller/LocFixer/archive/refs/heads/main.zip"
+    "downloadURL": "https://github.com/HuyTheKiller/LocFixer/archive/refs/heads/main.zip",
+    "folderName": "LocFixer",
+    "version": "1.0.0",
+    "automatic-version-check": false
 }
