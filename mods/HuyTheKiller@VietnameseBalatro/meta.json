@@ -7,6 +7,5 @@
     "repo": "https://github.com/HuyTheKiller/VietnameseBalatro",
     "downloadURL": "https://github.com/HuyTheKiller/VietnameseBalatro/archive/refs/heads/main.zip",
     "folderName": "VietnameseBalatro",
-    "version": "1.3.0",
-    "automatic-version-check": false
+    "automatic-version-check": true
 }
