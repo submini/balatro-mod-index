@@ -5,5 +5,7 @@
   "categories": ["Content", "Technical", "Miscellaneous"],
   "author": "Virtualized",
   "repo": "https://github.com/V-rtualized/BalatroMultiplayer",
-  "downloadURL": "https://github.com/V-rtualized/BalatroMultiplayer/releases/latest/download/BalatroMultiplayer.zip"
+  "downloadURL": "https://github.com/V-rtualized/BalatroMultiplayer/releases/latest/download/BalatroMultiplayer.zip",
+  "folderName": "Multiplayer",
+  "automatic-version-check": true
 }
