@@ -35,17 +35,23 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
   "categories": ["Content"],
   "author": "Joe Mama",
   "repo": "https://github.com/joemama/extended-cards",
-  "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.tar.gz"
+  "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.tar.gz",
+  "folderName": "ExtendedCards",
+  "version": "1.0.0",
+  "automatic-version-check": true
 }
 
 ```
 - **title**: The name of your mod.
 - **requires-steamodded**: If your mod requires the [Steamodded](https://github.com/Steamodded/smods) mod loader, set this to `true`.
-- **requires-talisman**: If your mod requires the [Talisman](https://github.com/MathIsFun0/Talisman) mod, set this to `true`.
-- **categories**: Must be of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
+- *requires-talisman*: (*Optional*) If your mod requires the [Talisman](https://github.com/MathIsFun0/Talisman) mod, set this to `true`.
+- **categories**: Must contain at least one of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
 - **author**: Your chosen username or handle.
 - **repo**: A link to your mod's repository.
 - **downloadURL**: A direct link to the latest version of your released mod. (Can be same as `repo` if no separate download link exists.)
+- *folderName*: (*Optional*) The name for the mod's install folder. This must not contain characters `<` `>` `:` `"` `/` `\` `|` `?` `*`
+- *version*: (*Optional*, but **recommended**, if `automatic-version-check` disabled) The latest version of your mod.
+- *automatic-version-check*: (*Optional*, but **recommended**) Gets the latest release from your mod's repository and updates the `version` field. If there is no release, it will check the latest commit. Set this parameter to `true`, to enable this feature. (Note: the index updates every hour)
 
 ### 3. thumbnail.jpg (Optional)
 If included, this image will appear alongside your mod in the index. Maximum and recommended size is 1920x1080 pixels.

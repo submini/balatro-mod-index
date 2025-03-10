@@ -11,44 +11,81 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Get full history for comparing changes
 
       - name: Install ImageMagick
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Check Required Files
+      - name: Identify Changed Mods
+        id: find-changed-mods
         run: |
-          for dir in mods/*/; do
-            if [ -d "$dir" ]; then
-              MOD_DIR="$(basename "$dir")"
+          # Fetch the base branch of the PR
+          git fetch origin ${{ github.event.pull_request.base.ref }}
+          
+          # Find all added or modified files in mods directory
+          git diff --name-only --diff-filter=AM origin/${{ github.event.pull_request.base.ref }}..HEAD | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
+          
+          if [ ! -s changed_mods.txt ]; then
+            echo "No mods were added or modified in this PR."
+            echo "changed_mods_found=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          echo "Changed mods found:"
+          cat changed_mods.txt
+          echo "changed_mods_found=true" >> $GITHUB_OUTPUT
+          
+          # Create a comma-separated list for JSON schema validation
+          META_JSON_FILES=""
+          while read -r mod_path; do
+            if [ -f "$mod_path/meta.json" ]; then
+              if [ -z "$META_JSON_FILES" ]; then
+                META_JSON_FILES="$mod_path/meta.json"
+              else
+                META_JSON_FILES="$META_JSON_FILES,$mod_path/meta.json"
+              fi
+            fi
+          done < changed_mods.txt
+          
+          echo "meta_json_files=$META_JSON_FILES" >> $GITHUB_OUTPUT
 
+      - name: Check Required Files
+        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        run: |
+          while read -r mod_path; do
+            if [ -d "$mod_path" ]; then
+              MOD_DIR="$(basename "$mod_path")"
+              
               # Ensure description.md and meta.json exist
-              if [ ! -f "$dir/description.md" ]; then
+              if [ ! -f "$mod_path/description.md" ]; then
                 echo "Error: Missing description.md in $MOD_DIR"
                 exit 1
               fi
-
-              if [ ! -f "$dir/meta.json" ]; then
+              
+              if [ ! -f "$mod_path/meta.json" ]; then
                 echo "Error: Missing meta.json in $MOD_DIR"
                 exit 1
               fi
             fi
-          done
+          done < changed_mods.txt
 
       - name: Check Thumbnail Dimensions
+        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
-          for dir in mods/*/; do
-            if [ -d "$dir" ]; then
-              MOD_DIR="$(basename "$dir")"
-              THUMBNAIL="$dir/thumbnail.jpg"
-
+          while read -r mod_path; do
+            if [ -d "$mod_path" ]; then
+              MOD_DIR="$(basename "$mod_path")"
+              THUMBNAIL="$mod_path/thumbnail.jpg"
+              
               if [ -f "$THUMBNAIL" ]; then
                 # Extract width and height using ImageMagick
                 DIMENSIONS=$(identify -format "%wx%h" "$THUMBNAIL")
                 WIDTH=$(echo "$DIMENSIONS" | cut -dx -f1)
                 HEIGHT=$(echo "$DIMENSIONS" | cut -dx -f2)
-
+                
                 # Check if dimensions exceed 1920x1080
                 if [ "$WIDTH" -gt 1920 ] || [ "$HEIGHT" -gt 1080 ]; then
                   echo "Error: Thumbnail in $MOD_DIR exceeds the recommended size of 1920×1080."
@@ -56,27 +93,35 @@ jobs:
                 fi
               fi
             fi
-          done
+          done < changed_mods.txt
 
       - name: Validate JSON Format
-        uses: github/super-linter@v4
-        env:
-          VALIDATE_JSON: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        run: |
+          # Use jq to validate each JSON file
+          while read -r mod_path; do
+            if [ -f "$mod_path/meta.json" ]; then
+              if ! jq empty "$mod_path/meta.json" 2>/dev/null; then
+                echo "Error: Invalid JSON format in $mod_path/meta.json"
+                exit 1
+              fi
+            fi
+          done < changed_mods.txt
 
       - name: Validate meta.json Against Schema
+        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
         uses: dsanders11/json-schema-validate-action@v1.2.0
         with:
           schema: "./schema/meta.schema.json"
-          files: |
-            mods/*/meta.json
+          files: ${{ steps.find-changed-mods.outputs.meta_json_files }}
 
       - name: Validate Download URLs
+        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
-          for dir in mods/*/; do
-            if [ -d "$dir" ]; then
-              MOD_DIR="$(basename "$dir")"
-              META_JSON="$dir/meta.json"
+          while read -r mod_path; do
+            if [ -d "$mod_path" ]; then
+              MOD_DIR="$(basename "$mod_path")"
+              META_JSON="$mod_path/meta.json"
               
               # Check if downloadURL exists and is not empty
               DOWNLOAD_URL=$(jq -r '.downloadURL // empty' "$META_JSON")
@@ -91,14 +136,14 @@ jobs:
                 exit 1
               fi
             fi
-          done
-
+          done < changed_mods.txt
 
   review-and-approve:
-      needs: validate  # This job will only run after 'validate' completes successfully.
-      runs-on: ubuntu-latest
-      environment:
-        name: mod-review  # This is the environment you created earlier.
-      steps:
-        - name: Await Approval from Maintainers
-          run: echo "Waiting for manual approval by maintainers..."
+    needs: validate # This job will only run after 'validate' completes successfully.
+    runs-on: ubuntu-latest
+    environment:
+      name: mod-review # This is the environment you created earlier.
+    steps:
+      - name: Await Approval from Maintainers
+        run: echo "Waiting for manual approval by maintainers..."
+
