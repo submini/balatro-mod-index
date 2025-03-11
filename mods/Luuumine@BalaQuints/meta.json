@@ -8,6 +8,6 @@
   "author": "Luuumine",
   "repo": "https://github.com/Luuumine/BalaQuints",
   "downloadURL": "https://github.com/Luuumine/BalaQuints/releases/download/v1.0/BalaQuints-v1.0.zip",
-  "automatic-version-check": true,
+  "automatic-version-check": false,
   "version": "v1.0"
 }

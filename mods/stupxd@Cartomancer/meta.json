@@ -8,6 +8,6 @@
   "author": "stupxd",
   "repo": "https://github.com/stupxd/Cartomancer",
   "downloadURL": "https://github.com/stupxd/Cartomancer/releases/download/v.4.11/Cartomancer-v.4.11.zip",
-  "automatic-version-check": true,
+  "automatic-version-check": false,
   "version": "v.4.11"
 }

@@ -8,6 +8,6 @@
   "author": "GitNether",
   "repo": "https://github.com/GitNether/balagay",
   "downloadURL": "https://github.com/GitNether/balagay/releases/download/v1.0.0/BalaGay.zip",
-  "automatic-version-check": true,
+  "automatic-version-check": false,
   "version": "v1.0.0"
 }

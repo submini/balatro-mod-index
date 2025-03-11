@@ -9,6 +9,6 @@
   "author": "Breezebuilder",
   "repo": "https://github.com/Breezebuilder/SystemClock",
   "downloadURL": "https://github.com/Breezebuilder/SystemClock/releases/download/v1.6.4/SystemClock-v1.6.4.zip",
-  "automatic-version-check": true,
+  "automatic-version-check": false,
   "version": "v1.6.4"
 }

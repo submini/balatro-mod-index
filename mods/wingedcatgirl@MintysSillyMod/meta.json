@@ -8,6 +8,6 @@
   "author": "wingedcatgirl",
   "repo": "https://github.com/wingedcatgirl/MintysSillyMod",
   "downloadURL": "https://github.com/wingedcatgirl/MintysSillyMod/releases/download/v0.4.0c/MintysSillyMod-0.4.0c.zip",
-  "automatic-version-check": true,
+  "automatic-version-check": false,
   "version": "v0.4.0c"
 }
