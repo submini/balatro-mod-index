@@ -25,9 +25,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Update mod versions
         run: |
           python .github/scripts/update_mod_versions.py
@@ -49,5 +46,3 @@ jobs:
             git push
           else
             echo "No changes to commit"
-          fi
-
