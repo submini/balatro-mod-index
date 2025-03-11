@@ -26,6 +26,8 @@ jobs:
           pip install requests
           
       - name: Update mod versions
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           python .github/scripts/update_mod_versions.py
           
@@ -47,4 +49,3 @@ jobs:
           else
             echo "No changes to commit"
           fi
-
