@@ -20,7 +20,7 @@ def extract_repo_info(repo_url):
         owner = match.group(1)
         repo = match.group(2)
         # Remove .git suffix if present
-        repo = repo.rstrip('.git')
+        repo = repo.removesuffix('.git')
         return owner, repo
     return None, None
 
