@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+          cache: 'pip'  # This enables pip caching
           
       - name: Install dependencies
         run: |
@@ -44,7 +45,6 @@ jobs:
             
             git add mods/*/meta.json
             git commit -m "$COMMIT_MSG"
-            # Using the PAT_TOKEN with the default token URL format
             git push
           else
             echo "No changes to commit"
