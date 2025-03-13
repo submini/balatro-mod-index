@@ -8,7 +8,7 @@
   "author": "Auto Watto & RS_Mind",
   "repo": "https://github.com/AutoWatto/CollabsReimagined",
   "downloadURL": "https://github.com/AutoWatto/CollabsReimagined/archive/refs/heads/main.zip",
-  "folderName": "CollabsReimagined"
+  "folderName": "CollabsReimagined",
   "version": "1.0.0",
-  "automatic-version-check": true,
+  "automatic-version-check": true
 }
