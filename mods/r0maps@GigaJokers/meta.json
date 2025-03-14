@@ -1,16 +1,13 @@
 {
-    "title": "GigaJokers",
-    "name": "GigaJokers",
-    "categories": ["Joker", "Resource Packs"],
-    "author": ["r0maps, Azurysu"],
-    "repo": "https://github.com/r0maps/GigaJokers/tree/mainhttps://github.com/r0maps/GigaJokers/tree/main",
-    "version": "1.5.0",
-    "description": "Jokers discouvered mewing and turned into GigaJokers jokers.",
-    "main_file": "main.lua",
-    "automatic-version-check": true,
-    "dependencies": [
-	"Lovely (>=0.6)",
-	"Steamodded (>=1.*~)",
-        "malverk (>=1.*)"
-    ]
+  "title": "GigaJokers",
+  "requires-steamodded": true,
+  "requires-malverk": true,
+  "categories": ["Resource Packs"],
+  "author": "r0maps, Azurysu",
+  "repo": "https://github.com/r0maps/GigaJokers/tree/main",
+  "downloadURL": "https://github.com/r0maps/GigaJokers/archive/refs/heads/main.zip",
+  "folderName": "ExtendedCards",
+  "version": "1.5.0",
+  "automatic-version-check": true
 }
+
