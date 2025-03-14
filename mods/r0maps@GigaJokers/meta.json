@@ -1,6 +1,7 @@
 {
   "title": "GigaJokers",
   "requires-steamodded": true,
+  "requires-talisman": false,
   "categories": [
     "Resource Packs"
   ],
