@@ -35,7 +35,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
   "categories": ["Content"],
   "author": "Joe Mama",
   "repo": "https://github.com/joemama/extended-cards",
-  "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.tar.gz",
+  "downloadURL": "https://github.com/joemama/extended-cards/releases/latest/extended-cards.zip",
   "folderName": "ExtendedCards",
   "version": "1.0.0",
   "automatic-version-check": true
@@ -44,7 +44,7 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
 ```
 - **title**: The name of your mod.
 - **requires-steamodded**: If your mod requires the [Steamodded](https://github.com/Steamodded/smods) mod loader, set this to `true`.
-- *requires-talisman*: (*Optional*) If your mod requires the [Talisman](https://github.com/MathIsFun0/Talisman) mod, set this to `true`.
+- **requires-talisman**: If your mod requires the [Talisman](https://github.com/MathIsFun0/Talisman) mod, set this to `true`.
 - **categories**: Must contain at least one of `Content`, `Joker`, `Quality of Life`, `Technical`, `Miscellaneous`, `Resource Packs` or `API`.
 - **author**: Your chosen username or handle.
 - **repo**: A link to your mod's repository.

@@ -43,6 +43,6 @@
       "type": "boolean"
     }
   },
-  "required": ["title", "requires-steamodded", "categories", "author", "repo", "downloadURL"]
+  "required": ["title", "requires-steamodded", "requires-talisman", "categories", "author", "repo", "downloadURL"]
 }
 
