@@ -3,7 +3,9 @@
   "requires-steamodded": true,
   "requires-talisman": true,
   "categories": [
-    "Content"
+    "categories": [
+    "Content",
+    "Joker"
   ],
   "author": "SMG9000, Denverplays2, MarioFan597",
   "repo": "https://github.com/smg9000/Cryptid-MoreMarioJokers",
