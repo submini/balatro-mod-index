@@ -2,10 +2,13 @@
   "title": "Prism",
   "requires-steamodded": true,
   "requires-talisman": false,
-  "categories": ["Content"],
+  "categories": [
+    "Content"
+  ],
   "author": "Blazingulag",
   "repo": "https://github.com/blazingulag/Prism",
   "downloadURL": "https://github.com/blazingulag/Prism/archive/refs/heads/main.zip",
   "folderName": "Prism",
-  "automatic-version-check": true
+  "automatic-version-check": true,
+  "version": "330aeda"
 }
