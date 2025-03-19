@@ -8,7 +8,7 @@
   ],
   "author": "astrapboy",
   "repo": "https://github.com/astrapboy/Mistigris",
-  "downloadURL": "https://github.com/astrapboy/Mistigris/archive/refs/heads/main.zip",
+  "downloadURL": "https://github.com/astrapboy/Mistigris/releases/latest/download/Mistigris.zip",
   "automatic-version-check": true,
-  "version": "9ca3689"
+  "version": "v0.3.0"
 }
