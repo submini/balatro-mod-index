@@ -22,12 +22,15 @@ jobs:
       - name: Identify Changed Mods
         id: find-changed-mods
         run: |
-          # Fetch the base branch of the PR
-          git fetch origin ${{ github.event.pull_request.base.ref }}
+          # Get the list of files changed in the PR using GitHub API with PAT
+          FILES_CHANGED=$(curl -s -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files" \
+            | jq -r '.[].filename')
           
-          # Find all added or modified files in mods directory
-          git diff --name-only --diff-filter=AM origin/${{ github.event.pull_request.base.ref }}..HEAD | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
+          # Filter for mod files and extract mod directories
+          echo "$FILES_CHANGED" | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
           
+          # Check if any mods were found
           if [ ! -s changed_mods.txt ]; then
             echo "No mods were added or modified in this PR."
             echo "changed_mods_found=false" >> $GITHUB_OUTPUT
