@@ -23,11 +23,27 @@ jobs:
         id: find-changed-mods
         run: |
           # Get the list of files changed in the PR using GitHub API with PAT
-          API_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+          API_RESPONSE=$(curl -s -X GET \
+            -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files")
           
-          # Extract filenames safely and filter for mod directories
-          echo "$API_RESPONSE" | jq -r '.[] | .filename' | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
+          # Debug the API response
+          echo "Debug - API Response Type: $(echo "$API_RESPONSE" | jq -r 'type')"
+          echo "Debug - First 300 chars of response: $(echo "$API_RESPONSE" | head -c 300)"
+          
+          # Use fallback method if API fails
+          if echo "$API_RESPONSE" | jq -e 'if type=="array" then true else false end' > /dev/null; then
+            echo "Using GitHub API method to find changed files"
+            echo "$API_RESPONSE" | jq -r '.[] | .filename' | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
+          else
+            echo "Using git diff method as fallback"
+            # Fetch the base branch of the PR
+            git fetch origin ${{ github.event.pull_request.base.ref }}
+            
+            # Find all added or modified files in mods directory using git diff
+            git diff --name-only --diff-filter=AM origin/${{ github.event.pull_request.base.ref }}..HEAD | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
+          fi
           
           # Check if any mods were found
           if [ ! -s changed_mods.txt ]; then
