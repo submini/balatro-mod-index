@@ -23,12 +23,11 @@ jobs:
         id: find-changed-mods
         run: |
           # Get the list of files changed in the PR using GitHub API with PAT
-          FILES_CHANGED=$(curl -s -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files" \
-            | jq -r '.[].filename')
+          API_RESPONSE=$(curl -s -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files")
           
-          # Filter for mod files and extract mod directories
-          echo "$FILES_CHANGED" | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
+          # Extract filenames safely and filter for mod directories
+          echo "$API_RESPONSE" | jq -r '.[] | .filename' | grep -E '^mods/[^/]+/' | cut -d'/' -f1-2 | sort | uniq > changed_mods.txt
           
           # Check if any mods were found
           if [ ! -s changed_mods.txt ]; then
@@ -149,4 +148,3 @@ jobs:
     steps:
       - name: Await Approval from Maintainers
         run: echo "Waiting for manual approval by maintainers..."
-
