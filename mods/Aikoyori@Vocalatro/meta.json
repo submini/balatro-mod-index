@@ -1,0 +1,13 @@
+{
+  "title": "Vocalatro",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": [
+    "Resource Packs"
+  ],
+  "author": "Aikoyori",
+  "repo": "https://github.com/Aikoyori/Vocalatro/",
+  "downloadURL": "https://github.com/Aikoyori/Vocalatro/",
+  "automatic-version-check": true,
+  "version": "c6c3cb9"
+}
