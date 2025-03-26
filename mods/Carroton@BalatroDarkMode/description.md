@@ -1,7 +1,3 @@
-<h1 align="center">Balatro Dark Mode</h1>
-
-<h3 align="center">A dark mode texture pack for Balatro</h3>
-
 # Key Features
 
 - Dark versions of:
