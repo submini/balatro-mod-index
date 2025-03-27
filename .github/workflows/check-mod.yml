@@ -14,7 +14,15 @@ jobs:
         with:
           fetch-depth: 0  # Get full history for comparing changes
 
-      - name: Install ImageMagick
+      - name: Cache ImageMagick
+        uses: actions/cache@v3
+        with:
+          path: /usr/bin/identify
+          key: imagemagick-cache-${{ runner.os }}-${{ hashFiles('**/check-mod.yml') }}
+          restore-keys: imagemagick-cache-${{ runner.os }}-
+
+      - name: Install ImageMagick (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
