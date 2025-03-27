@@ -14,24 +14,21 @@ jobs:
         with:
           fetch-depth: 0  # Get full history for comparing changes
 
-      - name: Install ImageMagick
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
+      - name: Use ImageMagick from cache
+        uses: awalsh128/cache-apt-pkgs-action@v1
+        with:
+          packages: imagemagick
+          version: 8:6.9.12.98+dfsg1-5.2build2
 
       - name: Identify Changed Mods
         id: find-changed-mods
         run: |
-          # Get the list of files changed in the PR using GitHub API with PAT
+          # Get the list of files changed in the PR using GitHub API
           API_RESPONSE=$(curl -s -X GET \
-            -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files")
-          
-          # Debug the API response
-          echo "Debug - API Response Type: $(echo "$API_RESPONSE" | jq -r 'type')"
-          echo "Debug - First 300 chars of response: $(echo "$API_RESPONSE" | head -c 300)"
-          
+
           # Use fallback method if API fails
           if echo "$API_RESPONSE" | jq -e 'if type=="array" then true else false end' > /dev/null; then
             echo "Using GitHub API method to find changed files"
@@ -91,7 +88,7 @@ jobs:
           done < changed_mods.txt
 
       - name: Check Thumbnail Dimensions
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
           while read -r mod_path; do
             if [ -d "$mod_path" ]; then
@@ -99,8 +96,9 @@ jobs:
               THUMBNAIL="$mod_path/thumbnail.jpg"
               
               if [ -f "$THUMBNAIL" ]; then
-                # Extract width and height using ImageMagick
-                DIMENSIONS=$(identify -format "%wx%h" "$THUMBNAIL")
+                # Extract width and height using ImageMagick identify
+                # Using identify-im6.q16 directly as identify is a symlink that is not created by the cache restoration
+                DIMENSIONS=$(/usr/bin/identify-im6.q16 -format "%wx%h" "$THUMBNAIL")
                 WIDTH=$(echo "$DIMENSIONS" | cut -dx -f1)
                 HEIGHT=$(echo "$DIMENSIONS" | cut -dx -f2)
                 
@@ -114,7 +112,7 @@ jobs:
           done < changed_mods.txt
 
       - name: Validate JSON Format
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
           # Use jq to validate each JSON file
           while read -r mod_path; do
@@ -127,14 +125,14 @@ jobs:
           done < changed_mods.txt
 
       - name: Validate meta.json Against Schema
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         uses: dsanders11/json-schema-validate-action@v1.2.0
         with:
           schema: "./schema/meta.schema.json"
           files: ${{ steps.find-changed-mods.outputs.meta_json_files }}
 
       - name: Validate Download URLs
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
           while read -r mod_path; do
             if [ -d "$mod_path" ]; then
