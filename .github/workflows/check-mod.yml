@@ -18,12 +18,7 @@ jobs:
         uses: awalsh128/cache-apt-pkgs-action@v1
         with:
           packages: imagemagick
-          execute_install_scripts: true
-
-      - name: DEBUG Check cache restore state
-        run: | 
-          ls -gh /usr/bin
-          ls -gh /usr/local/bin
+          version: 8:6.9.12.98+dfsg1-5.2build2
 
       - name: Identify Changed Mods
         id: find-changed-mods
@@ -102,7 +97,7 @@ jobs:
               
               if [ -f "$THUMBNAIL" ]; then
                 # Extract width and height using ImageMagick
-                DIMENSIONS=$(/usr/bin/identify -format "%wx%h" "$THUMBNAIL")
+                DIMENSIONS=$(/usr/bin/identify-im6.q16 -format "%wx%h" "$THUMBNAIL")
                 WIDTH=$(echo "$DIMENSIONS" | cut -dx -f1)
                 HEIGHT=$(echo "$DIMENSIONS" | cut -dx -f2)
                 
