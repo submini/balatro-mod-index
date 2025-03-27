@@ -14,18 +14,10 @@ jobs:
         with:
           fetch-depth: 0  # Get full history for comparing changes
 
-      - name: Cache ImageMagick
-        uses: actions/cache@v3
+      - name: Use ImageMagick from cache
+        uses: awalsh128/cache-apt-pkgs-action@v1
         with:
-          path: /usr/bin/identify
-          key: imagemagick-cache-${{ runner.os }}-${{ hashFiles('**/check-mod.yml') }}
-          restore-keys: imagemagick-cache-${{ runner.os }}-
-
-      - name: Install ImageMagick (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
+          packages: imagemagick
 
       - name: Identify Changed Mods
         id: find-changed-mods
@@ -35,7 +27,7 @@ jobs:
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files")
-          
+
           # Debug the API response
           echo "Debug - API Response Type: $(echo "$API_RESPONSE" | jq -r 'type')"
           echo "Debug - First 300 chars of response: $(echo "$API_RESPONSE" | head -c 300)"
