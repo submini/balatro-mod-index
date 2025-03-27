@@ -88,7 +88,7 @@ jobs:
           done < changed_mods.txt
 
       - name: Check Thumbnail Dimensions
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
           while read -r mod_path; do
             if [ -d "$mod_path" ]; then
@@ -112,7 +112,7 @@ jobs:
           done < changed_mods.txt
 
       - name: Validate JSON Format
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
           # Use jq to validate each JSON file
           while read -r mod_path; do
@@ -125,14 +125,14 @@ jobs:
           done < changed_mods.txt
 
       - name: Validate meta.json Against Schema
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         uses: dsanders11/json-schema-validate-action@v1.2.0
         with:
           schema: "./schema/meta.schema.json"
           files: ${{ steps.find-changed-mods.outputs.meta_json_files }}
 
       - name: Validate Download URLs
-        if: steps.find-changed-mods.outputs.changed_mods_found == 'true'
+        if: always() && steps.find-changed-mods.outputs.changed_mods_found == 'true'
         run: |
           while read -r mod_path; do
             if [ -d "$mod_path" ]; then
