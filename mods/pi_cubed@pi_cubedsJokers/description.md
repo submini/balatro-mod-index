@@ -1,4 +1,4 @@
-Adds a bunch of new vanilla-esc jokers that expand your choices in how you play and craft strong builds! All jokers and their art were personally developed by me, with a great amount of dev help from the Balatro Discord #modding-help channel.
+Adds a bunch of new vanilla-esc jokers that expand your choices in how you play and craft strong builds! All jokers and their art were personally developed by me, with a great amount of dev help from the Balatro Discord #modding-dev channel.
 
 Most art currently is developer art, and many more jokers (at least 30!) and a few extras are planned to be added too (see the sheet).
 
