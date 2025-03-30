@@ -1,13 +1,14 @@
 {
-    "title": "Highest Priestess",
-    "requires-steamodded": true,
-    "requires-talisman": false,
-    "categories": ["Content"],
-    "author": "TamerSoup625",
-    "repo": "https://github.com/TamerSoup625/balatro-highest-priestess",
-    "downloadURL": "https://github.com/TamerSoup625/balatro-highest-priestess/archive/refs/heads/main.zip",
-    "folderName": "HighestPriestess",
-    "version": "0.4.5",
-    "automatic-version-check": true
-  }
-  
+  "title": "Highest Priestess",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": [
+    "Content"
+  ],
+  "author": "TamerSoup625",
+  "repo": "https://github.com/TamerSoup625/balatro-highest-priestess",
+  "downloadURL": "https://github.com/TamerSoup625/balatro-highest-priestess/archive/refs/heads/main.zip",
+  "folderName": "HighestPriestess",
+  "version": "befc0ac",
+  "automatic-version-check": true
+}
