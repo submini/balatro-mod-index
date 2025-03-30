@@ -5,7 +5,7 @@
     "categories": ["Joker"],
     "author": "acetna",
     "repo": "https://github.com/acetna/Quilombo",
-    "downloadURL": "https://github.com/acetna/Quilombo/releases/download/hotfix/Quilombo_v1.0.1.zip",
+    "downloadURL": "https://github.com/acetna/Quilombo/releases/latest/download/Quilombo.zip",
     "folderName": "Quilombo",
     "version": "1.0.1",
     "automatic-version-check": true
