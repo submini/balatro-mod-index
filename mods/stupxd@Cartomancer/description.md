@@ -1,19 +1,17 @@
 # Cartomancer
-Balatro mod with quality of life deck & UI optimizations
+Balatro mod with quality of life improvements and some small optimizations.
 
 ## Features
-- Limit amount of cards visible in your deck pile, to make it appear smaller. Default limit is 100 cards, which can be modified in mod config menu.
 
-- Improved deck view
+- Improved deck view with options to stack equal cards, hide already drawn cards and more.
 
-- Custom scoring flames intensity and SFX volume.
+- Improved jokers management.
 
-- Hide non-essential (edition) shaders.
+- Improved deck display with custom cards limit.
 
-- Improved jokers management
+- Custom scoring flames intensity and volume.
 
+- and (maybe) more... 
 
 ## Settings
-Settings for this mod can be found under Mods tab, if you use Steamodded 1.0.0 - find Cartomancer, and open Config tab.
-
-If you only use Lovely, go to Settings and open the Cartomancer tab.
+Mod has most of the features toggleable in settings menu. Without Steamodded it is located in Settings. Otherwise you can open it via Mods menu.
