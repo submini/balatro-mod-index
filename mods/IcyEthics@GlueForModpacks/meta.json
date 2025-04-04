@@ -9,5 +9,6 @@
   "author": "IcyEthics",
   "repo": "https://github.com/icyethics/Glue-For-Modpacks",
   "downloadURL": "https://github.com/icyethics/Glue-For-Modpacks/archive/refs/heads/main.zip",
-  "automatic-version-check": true
+  "automatic-version-check": true,
+  "version": "b435499"
 }
