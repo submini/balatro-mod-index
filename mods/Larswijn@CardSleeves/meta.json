@@ -3,7 +3,8 @@
   "requires-steamodded": true,
   "requires-talisman": false,
   "categories": [
-    "Content"
+    "Content",
+    "API"
   ],
   "author": "Larswijn",
   "repo": "https://github.com/larswijn/CardSleeves",
