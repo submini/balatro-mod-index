@@ -3,7 +3,8 @@
   "requires-steamodded": true,
   "requires-talisman": false,
   "categories": [
-    "Joker"
+    "Joker",
+    "API"
   ],
   "author": "itayfeder",
   "repo": "https://github.com/lshtech/Fusion-Jokers",

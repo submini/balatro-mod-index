@@ -3,7 +3,8 @@
   "requires-steamodded": true,
   "requires-talisman": false,
   "categories": [
-    "Miscellaneous"
+    "Miscellaneous",
+    "API"
   ],
   "author": "wingedcatgirl",
   "repo": "https://github.com/wingedcatgirl/SpectrumFramework",
