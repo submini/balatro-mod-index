@@ -3,7 +3,8 @@
   "requires-steamodded": true,
   "requires-talisman": false,
   "categories": [
-    "Quality of Life"
+    "Quality of Life",
+    "API"
   ],
   "author": "Eremel",
   "repo": "https://github.com/Eremel/Galdur",
