@@ -2,11 +2,13 @@
   "title": "Entropy",
   "requires-steamodded": true,
   "requires-talisman": true,
-  "categories": ["Content"],
+  "categories": [
+    "Content"
+  ],
   "author": "Ruby",
   "repo": "https://github.com/lord-ruby/Entropy",
   "downloadURL": "https://github.com/lord-ruby/Entropy/archive/refs/heads/main.zip",
   "folderName": "Entropy",
-  "version": "0.2",
+  "version": "711939e",
   "automatic-version-check": true
 }
