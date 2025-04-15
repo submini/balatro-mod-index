@@ -94,4 +94,40 @@ Once your submission is reviewed and approved, your mod will be added to the Bal
 
 ---
 
-Thanks for contributing to the **Balatro Mod Index** and helping the community grow! 
+## Submission Policy
+
+All submissions must be safe, legal, and appropriate for a general audience. This means:
+1. No mods containing malware or spyware.
+
+2. No copyrighted content that is used without permission.
+   
+3. No hateful, discriminatory, or offensive material.
+
+By submitting your own mod to the *Balatro Mod Index*, you are agreeing to allow your mod to be displayed in and redistributed by [Balatro Mod Manager](https://github.com/skyline69/balatro-mod-manager/).
+If you would like your content to be removed from the *Balatro Mod Index* at any point, please create an [Issue](https://github.com/skyline69/balatro-mod-index/issues) or submit a [Pull Request](https://github.com/skyline69/balatro-mod-manager/pulls) with the relevant content deleted.
+
+
+### Third-Party Submissions
+Mods should ideally be submitted by their creators. If you would like to submit a mod on behalf of a mod's creator, please do so in a way that is considerate of the author, their creative works, and their time.
+
+Mods will only be accepted on the Balatro Mod Index if they have been released under a redistribution-friendly license (such as GPL, MIT, MPL or similar), or if the mod's authors have given explicit and public permission.
+It is strongly encouraged to ask for permission before submitting other's mods to the *Balatro Mod Index*, regardless of license.
+
+**Before submitting mods created by other people:**
+1. Check that the mod is **working** on the most current version of the game, and has not been **deprecated** or **abandoned**.
+
+2. Check that the mod's **license** allows **redistribution** by third parties - otherwise, **ask permission** from the creator.
+   
+3. Check the mod's requirements for **Steamodded** and **Talisman**, along with any other dependencies that should be listed in the description.
+   
+4. Check if the mod requires a specific installation **folder name**, and set the `folderName` parameter accordingly.
+   
+5. Check that the mod doesn't have any other special or unusual **installation requirements**.
+   
+6. Check if the mod has any **promotional images** that might be suitable for use as a **thumbnail**.
+
+When submitting a mod on behalf of someone else, please link to the latest **Release** whenever possible rather than the latest repository HEAD.
+This helps to keep modded Balatro stable for more players, by only using tested releases instead of potentially untested in-development builds.
+
+
+Thanks for contributing to the *Balatro Mod Index* and helping the community grow! 
