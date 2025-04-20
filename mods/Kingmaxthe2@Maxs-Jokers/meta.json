@@ -1,0 +1,12 @@
+{
+  "title": "Max's Jokers",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["Joker"],
+  "author": "Kingmaxthe2",
+  "repo": "https://github.com/Kingmaxthe2/Kingmaxthe2-Joker-Pack",
+  "downloadURL": "https://github.com/Kingmaxthe2/Kingmaxthe2-Joker-Pack/releases/tag/1.0/Kingmaxthe2-Joker-Pack-1.0.zip",
+  "folderName": "Kingmaxthe2 Joker Pack",
+  "version": "1.0.0",
+  "automatic-version-check": true
+}
