@@ -6,9 +6,9 @@
     "Quality of Life",
     "Miscellaneous"
   ],
-  "author": "janw4ld",
-  "repo": "https://github.com/janw4ld/balatro-typist-mod",
-  "downloadURL": "https://github.com/janw4ld/balatro-typist-mod/archive/refs/tags/1.6.2.zip",
+  "author": "kasimeka",
+  "repo": "https://github.com/kasimeka/balatro-typist-mod",
+  "downloadURL": "https://github.com/kasimeka/balatro-typist-mod/archive/refs/tags/1.6.2.zip",
   "automatic-version-check": true,
   "version": "1.6.2"
 }
