@@ -3,11 +3,13 @@
 import json
 import os
 import re
-import requests
 import sys
 import time
 from datetime import datetime
+from enum import Enum
 from pathlib import Path
+
+import requests
 
 # GitHub API rate limits are higher with authentication
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
@@ -24,12 +26,19 @@ def extract_repo_info(repo_url):
         return owner, repo
     return None, None
 
-def get_version_string(source, owner, repo, start_timestamp, n = 1):
+VersionSource = Enum("VersionSource", [
+    ("RELEASE_TAG", "release"),
+    ("HEAD", "commit"),
+])
+def get_version_string(source: Enum, owner, repo, start_timestamp, n = 1):
     """Get the version string from a given GitHub repo."""
     
-    if source == 'release':
+    if source is VersionSource.RELEASE_TAG:
         url = f'https://api.github.com/repos/{owner}/{repo}/releases/latest'
     else:
+        if not source is VersionSource.HEAD:
+            print(f"UNIMPLEMENTED(VersionSource): `{source}`,\nfalling back to `HEAD`")
+            source = VersionSource.HEAD
         url = f'https://api.github.com/repos/{owner}/{repo}/commits'
 
     try:
@@ -42,20 +51,30 @@ def get_version_string(source, owner, repo, start_timestamp, n = 1):
         api_resource = response.headers.get('x-ratelimit-resource')
         print(f"GitHub API ({api_resource}) calls: {api_rate_usage}/{api_rate_limit}")
 
-        if response.status_code == 200:
-            if source == 'release':
-                data = response.json()
-                # Return name of latest tag
-                return data.get('tag_name')
-            else:
-                commits = response.json()
-                if commits and len(commits) > 0:
-                    # Return shortened commit hash (first 7 characters)
-                    return commits[0]['sha'][:7]
-        elif response.status_code == 404:
+        if response.status_code == 404:
             # Not found
             return None
-        elif api_rate_remaining == 0 or (response.status_code == 403 and 'rate limit exceeded' in response.text.lower()):
+
+        if response.status_code == 200:
+            data = response.json()
+
+            if source is VersionSource.RELEASE_TAG:
+                # Return name of latest tag
+                return data.get('tag_name')
+
+            if data and len(data) > 0:
+                # Return shortened commit hash (first 7 characters)
+                return data[0]['sha'][:7]
+
+            print(f"⚠️ Warning: unexpected response format for {source}s:\n{
+                json.dumps(data, indent=2, ensure_ascii=False)
+            }")
+            return
+
+        if api_rate_remaining == 0 or (
+            response.status_code == 403
+            and "rate limit exceeded" in response.text.lower()
+        ):
             print(f"GitHub API access is being rate limited!")
             current_timestamp = int(time.time())
             
@@ -95,85 +114,97 @@ def process_mods(start_timestamp):
     """Process all mods and update versions where needed."""
     mods_dir = Path('mods')
     updated_mods = []
-    
     print(f"Scanning {mods_dir} for mods with automatic version control...")
     
     # Find all mod directories
-    for mod_dir in [d for d in mods_dir.iterdir() if d.is_dir()]:
+    for mod_dir in (d for d in mods_dir.iterdir() if d.is_dir()):
         meta_file = mod_dir / 'meta.json'
         
         if not meta_file.exists():
             continue
-            
-        try:
-            with open(meta_file, 'r', encoding='utf-8') as f:
-                meta = json.load(f)
-                
-            # Skip mods without automatic version checking enabled
-            if not meta.get('automatic-version-check', False):
-                continue
-                
-            print(f"Processing {mod_dir.name}...")
-            
-            repo_url = meta.get('repo')
-            if not repo_url:
-                print(f"⚠️ Warning: Mod {mod_dir.name} has automatic-version-check but no repo URL")
-                continue
-                
-            owner, repo = extract_repo_info(repo_url)
-            if not owner or not repo:
-                print(f"⚠️ Warning: Could not extract repo info from {repo_url}")
-                continue
-                
-            print(f"Checking GitHub repo: {owner}/{repo}")
-                
-            # If download url links to latest head, use version of latest commit hash
-            download_url = meta.get('downloadURL')
-            if "/archive/refs/heads/" in download_url:
-                print("Download URL links to HEAD, checking latest commit...")
-                version_source = "commit"
-                new_version = get_version_string(version_source, owner, repo, start_timestamp)
-            else:
-                # Try to get latest release version
-                print("Checking releases for latest version tag...")
-                version_source = "release"
-                new_version = get_version_string(version_source, owner, repo, start_timestamp)
-                
-                # If no releases, fall back to latest commit
-                if not new_version:
-                    print("No releases found, checking latest commit...")
-                    version_source = "commit"
-                    new_version = get_version_string(version_source, owner, repo, start_timestamp)
 
-            if not new_version:
-                print(f"⚠️ Warning: Could not determine version for {mod_dir.name}")
-                continue
-                
-            current_version = meta.get('version')
-            
-            # Update version if it changed
-            if current_version != new_version:
-                print(f"✅ Updating {mod_dir.name} from {current_version or 'none'} to {new_version} ({version_source})")
-                meta['version'] = new_version
-                
-                with open(meta_file, 'w', encoding='utf-8') as f:
-                    # Preserve formatting with indentation
-                    json.dump(meta, f, indent=2, ensure_ascii=False)
-                    f.write("\n")  # Add newline at end of file
-                    
-                updated_mods.append({
-                    'name': meta.get('title', mod_dir.name),
-                    'old_version': current_version,
-                    'new_version': new_version,
-                    'source': version_source
-                })
-            else:
-                print(f"ℹ️ No version change for {mod_dir.name} (current: {current_version})")
-                
+        try:
+            if mod := process_mod(start_timestamp, mod_dir.name, mod_dir / 'meta.json'):
+                updated_mods.append(mod)
         except Exception as e:
             print(f"❌ Error processing {mod_dir.name}: {str(e)}")
             
     return updated_mods
+
+def process_mod(start_timestamp, name, meta_file):
+    if not meta_file.exists():
+        return
+
+    with open(meta_file, 'r', encoding='utf-8') as f:
+        meta = json.load(f)
+        
+    # Skip mods without automatic version checking enabled
+    if not meta.get('automatic-version-check'):
+        return
+
+    print(f"Processing {name}...")
+    
+    repo_url = meta.get('repo')
+    if not repo_url:
+        print(f"⚠️ Warning: Mod {name} has automatic-version-check but no repo URL")
+        return
+        
+    owner, repo = extract_repo_info(repo_url)
+    if not owner or not repo:
+        print(f"⚠️ Warning: Could not extract repo info from {repo_url}")
+        return
+
+    print(f"Checking GitHub repo: `{owner}/{repo}`")
+        
+    # If download url links to latest head, use version of latest commit hash
+    download_url = meta.get('downloadURL')
+
+    new_version = None
+
+    if "/archive/refs/heads/" in download_url:
+        print("Download URL links to HEAD, checking latest commit...")
+        source = VersionSource.HEAD
+        new_version = get_version_string(VersionSource.HEAD, owner, repo, start_timestamp)
+
+    else:
+        print("Checking releases for latest version tag...")
+        source = VersionSource.RELEASE_TAG
+        new_version = get_version_string(source, owner, repo, start_timestamp)
+
+        if not new_version:
+            print("No releases found, falling back to latest commit instead...")
+            source = VersionSource.HEAD
+            new_version = get_version_string(source, owner, repo, start_timestamp)
+
+    if not new_version:
+        print(f"⚠️ Warning: Could not determine version for {name}")
+        return
+
+    current_version = meta.get('version')
+    # Update version if it changed
+    if current_version == new_version:
+        print(f"ℹ️ No version change for {name} (current: {current_version})")
+        return
+
+    print(
+        f"✅ Updating {name} from {current_version} to {new_version} ({source})"
+    )
+    meta['version'] = new_version
+    if "/archive/refs/tags/" in download_url:
+        meta['downloadURL'] = f"{repo_url}/archive/refs/tags/{meta['version']}.zip"
+    
+    with open(meta_file, 'w', encoding='utf-8') as f:
+        # Preserve formatting with indentation
+        json.dump(meta, f, indent=2, ensure_ascii=False)
+        f.write("\n")  # Add newline at end of file
+
+    return {
+        'name': meta.get('title', name),
+        'old_version': current_version,
+        'new_version': meta['version'],
+        'source': source
+    }
+
 
 def generate_commit_message(updated_mods):
     """Generate a detailed commit message listing all updated mods."""
@@ -190,6 +221,7 @@ def generate_commit_message(updated_mods):
         message += f"- {mod['name']}: {old_ver} → {mod['new_version']} ({mod['source']})\n"
         
     return message
+
 
 if __name__ == "__main__":
     start_timestamp = int(time.time())
