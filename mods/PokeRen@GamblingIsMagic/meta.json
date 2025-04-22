@@ -1,0 +1,11 @@
+{
+    "title": "Gambling is Magic",
+    "requires-steamodded": true,
+    "requires-talisman": false,
+    "categories": ["Resource Packs"],
+    "author": "PokeRen and Radspeon",
+    "repo": "https://github.com/RenSnek/GamblingIsMagic",
+    "downloadURL": "https://github.com/RenSnek/GamblingIsMagic/archive/refs/heads/master.zip",
+    "version":"v0.1.0",
+    "automatic-version-check": true
+}
