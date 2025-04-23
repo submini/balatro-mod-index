@@ -10,5 +10,5 @@
   "downloadURL": "https://github.com/TheBearodactyl/insolence-balatro/archive/refs/tags/1.0.0.zip",
   "folderName": "Insolence",
   "version": "1.0.0",
-  "automatic-version-check": false
+  "automatic-version-check": true
 }
