@@ -4,4 +4,4 @@ This mod makes the designs on the Consumables pop out of the card (Similarly to 
 
 ## NOTE:
 
-SoulTarots requires [Malverk](https://github.com/Eremel/malverk).
+SoulEverything requires [Malverk](https://github.com/Eremel/malverk).
