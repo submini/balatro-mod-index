@@ -35,8 +35,14 @@
     "folderName": {
       "type": "string",
       "pattern": "^[^<>:\"/\\|?*]+$"
+    },
+	"version": {
+      "type": "string"
+    },
+	"automatic-version-check": {
+      "type": "boolean"
     }
   },
-  "required": ["title", "requires-steamodded", "categories", "author", "repo", "downloadURL"]
+  "required": ["title", "requires-steamodded", "requires-talisman", "categories", "author", "repo", "downloadURL"]
 }
 

@@ -2,9 +2,13 @@
   "title": "Cryptid",
   "requires-steamodded": true,
   "requires-talisman": true,
-  "categories": ["Content"],
+  "categories": [
+    "Content"
+  ],
   "author": "MathIsFun0",
-  "repo":"https://github.com/MathIsFun0/Cryptid",
+  "repo": "https://github.com/MathIsFun0/Cryptid",
   "downloadURL": "https://github.com/MathIsFun0/Cryptid/archive/refs/heads/main.zip",
-  "folderName": "Cryptid"
+  "folderName": "Cryptid",
+  "automatic-version-check": true,
+  "version": "3e6d97a"
 }
