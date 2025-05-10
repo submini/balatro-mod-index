@@ -5,6 +5,6 @@
     "categories": ["Joker"],
     "author": "Microwave",
     "repo": "https://github.com/ItsaMicrowave/Horizon-Mod",
-    "downloadURL": " https://github.com/ItsaMicrowave/Horizon-Mod/archive/refs/tags/v1.zip",
+    "downloadURL": "https://github.com/ItsaMicrowave/Horizon-Mod/archive/refs/tags/v1.zip",
     "automatic-version-check": true
   }
