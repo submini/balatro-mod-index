@@ -7,3 +7,6 @@ A small-scale vanilla-style content mod for Balatro University.
 
 - 3 cool new decks too!
 
+## Credits
+
+Made by CampfireCollective and Balatro University Community.
