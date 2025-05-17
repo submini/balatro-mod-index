@@ -1,0 +1,14 @@
+{
+    "title": "Slay the Jokers",
+    "requires-steamodded": true,
+    "requires-talisman": false,
+    "categories": [
+        "API"
+    ],
+    "author": "edalo",
+    "repo": "https://github.com/its-edalo/slay-the-jokers",
+    "downloadURL": "https://github.com/its-edalo/slay-the-jokers/archive/main.zip",
+    "folderName": "slay-the-jokers-main",
+    "version": "0.1.3a",
+    "automatic-version-check": true
+}
