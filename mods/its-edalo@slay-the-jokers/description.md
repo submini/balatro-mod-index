@@ -2,6 +2,7 @@
 A mod that allows your viewers to hover over cards on your stream to see their effects and current values.
 
 Heads up! This mod requires additional setup steps before it can work.
+
 If you need help or have suggestions feel free to contact me at itsedalo@gmail.com.
 
 ## Setup Instructions
@@ -17,6 +18,8 @@ If you need help or have suggestions feel free to contact me at itsedalo@gmail.c
 ## Things to Know Before Installing
 - **Stream Overlays**: This mod currently only works correctly if the game is shown at a 16:9 resolution (like 1920x1080 / 4K / 8K) and **fills the entire visible area of the stream**. Overlays that crop or reposition the game may cause card positions to misalign.
     - If that's a dealbreaker, feel free to contact me - I might be able to make it work for your setup.
+
+- **Windows Only**: This mod currently supports only **\*Windows\*** systems.
 
 - **Other Mods & Compatibility**: This mod should be compatible with most other mods.
     - Compatible mods:
