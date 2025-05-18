@@ -1,9 +1,9 @@
 {
     "title": "Slay the Jokers",
-    "requires-steamodded": true,
+    "requires-steamodded": false,
     "requires-talisman": false,
     "categories": [
-        "API"
+        "Quality of Life"
     ],
     "author": "edalo",
     "repo": "https://github.com/its-edalo/slay-the-jokers",
