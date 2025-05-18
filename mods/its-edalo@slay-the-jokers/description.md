@@ -1,4 +1,8 @@
-# IMPORTANT! The mod will NOT work otherwise!
+# Slay the Jokers
+A mod that allows your viewers to hover over cards on your stream to see their effects and current values.
+
+Heads up! This mod requires additional setup steps before it can work.
+If you need help or have suggestions feel free to contact me at itsedalo@gmail.com.
 
 ## Setup Instructions
 - **Upload Key**: To use this mod, you'll need an upload key to the Slay the Jokers server.
