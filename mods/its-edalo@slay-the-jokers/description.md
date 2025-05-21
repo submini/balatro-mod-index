@@ -13,7 +13,10 @@ If you need help or have suggestions feel free to contact me at itsedalo@gmail.c
     - Use the automated system at https://edalo.net/stj/get-key (you will need to verify your Twitch account to prove it's really you)
         - This feature is new; if something fails, fall back to emailing me
 2. Place `upload.key` in the `Balatro` data directory (`%appdata%\Balatro`)
-3. Enable the [extension](https://dashboard.twitch.tv/extensions/iaofk5k6d87u31z9uy2joje2fwn347) on your Twitch channel
+3. Launch Balatro and wait for it to fully load
+    - A black command window (part of `Lovely`) will appear - don't close it
+    - On first launch, it will automatically install required tools for this mod
+4. Enable the [extension](https://dashboard.twitch.tv/extensions/iaofk5k6d87u31z9uy2joje2fwn347) on your Twitch channel
 
 ## Things to Know Before Installing
 - **Stream Overlays**: This mod currently only works correctly if the game is shown at a 16:9 resolution (like 1920x1080 / 4K / 8K) and **fills the entire visible area of the stream**. Overlays that crop or reposition the game may cause card positions to misalign.
