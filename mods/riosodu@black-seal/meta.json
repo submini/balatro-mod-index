@@ -1,8 +1,8 @@
 {
   "title": "Black Seal",
   "requires-steamodded": true,
+  "requires-talisman": false,
   "categories": [
-    "Seal",
     "Balance"
   ],
   "author": "Riosodu",
