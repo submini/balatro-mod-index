@@ -1,0 +1,12 @@
+{
+  "title": "Absent Dealer",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["Content", "Joker"],
+  "author": "Absent Abigail",
+  "repo": "https://github.com/AbsentAbigail/AbsentDealer",
+  "downloadURL": "https://github.com/AbsentAbigail/AbsentDealer/releases/latest/",
+  "folderName": "AbsentDealer",
+  "version": "1.0.0",
+  "automatic-version-check": true
+}
