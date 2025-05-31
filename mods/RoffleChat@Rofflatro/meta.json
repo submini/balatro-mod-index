@@ -5,7 +5,7 @@
   "categories": ["Content", "Joker"],
   "author": "Roffle's Chat",
   "repo": "https://github.com/MamiKeRiko/Rofflatro",
-  "downloadURL": "https://github.com/MamiKeRiko/Rofflatro/releases/latest",
+  "downloadURL": "https://github.com/MamiKeRiko/Rofflatro/archive/refs/tags/v1.1.0.zip",
   "folderName": "Rofflatro",
   "version": "1.1.0",
   "automatic-version-check": true
