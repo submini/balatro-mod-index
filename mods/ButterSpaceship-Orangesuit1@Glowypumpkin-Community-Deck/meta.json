@@ -2,10 +2,12 @@
   "title": "Glowypumpkin Community Deck",
   "requires-steamodded": true,
   "requires-talisman": false,
-  "categories": ["Resource Packs"],
+  "categories": [
+    "Resource Packs"
+  ],
   "author": "ButterSpaceship",
   "repo": "https://github.com/ButterSpaceship/Glowypumpkin-Community-Mod",
   "downloadURL": "https://github.com/ButterSpaceship/Glowypumpkin-Community-Mod/releases/latest/download/GlowyPumpkin-Custom-Deck.zip",
-  "version": "4.0.0",
+  "version": "V4.0",
   "automatic-version-check": true
 }
