@@ -8,5 +8,5 @@
     "downloadURL": "https://github.com/SurelyNotClover/Kevin-s-UTY-Balatro-Mod/releases/download/Release/KevinsUTY.zip",
     "folderName": "KevinsUTY",
     "version": "1.0.0",
-    "automatic-version-check": true
+    "automatic-version-check": false
   }
