@@ -1,0 +1,15 @@
+{
+  "title": "Visibility",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": [
+    "Content",
+    "Joker",
+    "Miscellaneous"
+  ],
+  "author": "GunnableScum, InvisibleSides and Monachroma",
+  "repo": "https://github.com/GunnableScum/Visibility",
+  "downloadURL": "https://github.com/GunnableScum/Visibility/releases/download/demo/Visibility.zip",
+  "automatic-version-check": true,
+  "version": "v1.0.0-DEMO"
+}
