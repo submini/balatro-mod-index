@@ -3,11 +3,11 @@ Adds a bunch of new vanilla-esque jokers that expand your choices in how you pla
 Most art currently is developer art, and many more jokers (at least 30!) and a few extras are planned to be added too (see the sheet).
 
 ### Requirements:
-teamodded 1.0.0~BETA-0531a or newer
+Steamodded 1.0.0~BETA-0530b or newer
 
 ## External Links
-### Github Page:
-https://github.com/pi-cubed-cat/pi_cubeds_jokers
+### Modded Wiki Page:
+https://balatromods.miraheze.org/wiki/Pi_cubed%27s_Jokers
 
 ### Joker Info, Patch Notes, & Roadmap Sheet:
 https://docs.google.com/spreadsheets/d/1s2MFswjKUeVcx3W0Cylmya1ZfFvx2fiQZD42ZThxd5Q/edit?usp=sharing
