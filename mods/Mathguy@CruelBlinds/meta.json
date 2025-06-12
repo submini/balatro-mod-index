@@ -5,5 +5,7 @@
   "categories": ["Content"],
   "author": "Mathguy",
   "repo": "https://github.com/Mathguy23/Cruel-Blinds",
+  "automatic-version-check": true,
+  "version": "0b0bcf1",
   "downloadURL": "https://github.com/Mathguy23/Cruel-Blinds/archive/refs/heads/main.zip"
 }
