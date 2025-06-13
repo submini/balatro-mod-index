@@ -2,10 +2,12 @@
   "title": "Cruel Blinds",
   "requires-steamodded": true,
   "requires-talisman": false,
-  "categories": ["Content"],
+  "categories": [
+    "Content"
+  ],
   "author": "Mathguy",
   "repo": "https://github.com/Mathguy23/Cruel-Blinds",
   "automatic-version-check": true,
-  "version": "0b0bcf1",
+  "version": "7b6e138",
   "downloadURL": "https://github.com/Mathguy23/Cruel-Blinds/archive/refs/heads/main.zip"
 }
