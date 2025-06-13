@@ -16,7 +16,15 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["Content", "Joker", "Quality of Life", "Technical", "Miscellaneous", "Resource Packs", "API"]
+        "enum": [
+          "Content",
+          "Joker",
+          "Quality of Life",
+          "Technical",
+          "Miscellaneous",
+          "Resource Packs",
+          "API"
+        ]
       },
       "minItems": 1,
       "uniqueItems": true
@@ -36,13 +44,21 @@
       "type": "string",
       "pattern": "^[^<>:\"/\\|?*]+$"
     },
-	"version": {
+    "version": {
       "type": "string"
     },
-	"automatic-version-check": {
+    "automatic-version-check": {
       "type": "boolean"
     }
   },
-  "required": ["title", "requires-steamodded", "requires-talisman", "categories", "author", "repo", "downloadURL"]
+  "required": [
+    "title",
+    "requires-steamodded",
+    "requires-talisman",
+    "categories",
+    "author",
+    "repo",
+    "downloadURL",
+    "version"
+  ]
 }
-
