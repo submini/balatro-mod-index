@@ -5,11 +5,6 @@ The mod adds a new sorting button to the menu.
 
 https://github.com/user-attachments/assets/04284804-7673-4769-91d5-102c71e7d654
 
-## What Is MagicSort?
-
-MagicSort intelligently organizes your hand, saving you countless clicks during mid- to lategame.
-The mod adds a new sorting button to the menu.
-
 ## Motivation
 
 I love Balatro but hate clicking, that's why I made this mod.
