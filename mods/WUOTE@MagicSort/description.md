@@ -3,7 +3,7 @@
 MagicSort intelligently organizes your hand, saving you countless clicks during mid- to lategame.
 The mod adds a new sorting button to the menu.
 
-https://github.com/user-attachments/assets/04284804-7673-4769-91d5-102c71e7d654
+Here's the [demo of the mod on YouTube](https://www.youtube.com/watch?v=ojnt9M1gzCg)
 
 ## Motivation
 
