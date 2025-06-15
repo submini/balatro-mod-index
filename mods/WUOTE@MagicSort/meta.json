@@ -7,7 +7,7 @@
   ],
   "author": "WUOTE",
   "repo": "https://github.com/acidflow-balatro/MagicSort",
-  "downloadURL": "https://github.com/acidflow-balatro/MagicSort/releases/download/0.6.9/MagicSort.zip",
+  "downloadURL": "https://github.com/acidflow-balatro/MagicSort/releases/latest/download/MagicSort.zip",
   "automatic-version-check": true,
   "version": "0.6.9"
 }
