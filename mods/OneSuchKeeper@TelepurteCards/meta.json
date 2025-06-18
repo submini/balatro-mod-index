@@ -1,0 +1,13 @@
+{
+  "title": "Telepurte Cards",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": [
+    "Resource Packs"
+  ],
+  "author": "OneSuchKeeper", "Telepurte",
+  "repo": "https://github.com/onesuchkeeper/telepurtedeck",
+  "downloadURL": "https://github.com/onesuchkeeper/telepurtecards/releases/latest/download/hunatro.zip",
+  "automatic-version-check": true,
+  "version": "v1.0.0"
+}
