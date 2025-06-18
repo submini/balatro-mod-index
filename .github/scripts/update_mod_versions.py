@@ -239,7 +239,7 @@ def process_mod(start_timestamp, name, meta_file):
     if "/archive/refs/tags/" in download_url:
         meta['downloadURL'] = f"{repo_url}/archive/refs/tags/{meta['version']}.zip"
     elif source == VersionSource.SPECIFIC_TAG:
-        meta['download_url'] = f"{repo_url}/releases/download/{tag_data['name']}/{tag_data['file']}"
+        meta['downloadUrl'] = f"{repo_url}/releases/download/{tag_data['name']}/{tag_data['file']}"
     
     with open(meta_file, 'w', encoding='utf-8') as f:
         # Preserve formatting with indentation
