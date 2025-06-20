@@ -1,0 +1,16 @@
+{
+  "title": "Brainstorm-Rerolled",
+  "requires-steamodded": false,
+  "requires-talisman": false,
+  "categories": [
+    "Content",
+    "Technical",
+    "Miscellaneous"
+  ],
+  "author": "ABGamma",
+  "repo": "https://github.com/ABGamma/Brainstorm-Rerolled/",
+  "downloadURL": "https://github.com/ABGamma/Brainstorm-Rerolled/archive/refs/tags/Brainstorm-Rerolled-1.0.2-alpha.zip",
+  "folderName": "Brainstorm-Rerolled",
+  "version": "Brainstorm-Rerolled-1.0.2-alpha",
+  "automatic-version-check": true
+}
