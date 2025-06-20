@@ -11,5 +11,5 @@
   "downloadURL": "https://github.com/OceanRamen/Saturn/archive/refs/tags/alpha-0.2.2-E-qf3.zip",
   "folderName": "Saturn",
   "version": "alpha-0.2.2-E-qf3",
-  "automatic-version-check": false
+  "automatic-version-check": true
 }
