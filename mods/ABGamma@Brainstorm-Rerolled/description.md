@@ -53,7 +53,3 @@ once added there you can build it and then copy the resulting dll into the brain
 	1. Add a new entry to the `local custom_filter_keys` corresponding to your new filter
 1. Save ui.lua and run the game
 1. Your new filter should now be usable in the brainstorm settings
-
-### Settings
-Here is a bunch of settings in game
-![Brainstorm_Mod_Settings.png](Brainstorm_Mod_Settings.png)
