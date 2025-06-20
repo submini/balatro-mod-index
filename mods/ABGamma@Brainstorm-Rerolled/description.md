@@ -1,24 +1,13 @@
 # Brainstorm Rerolled
 This is a fork of both [Brainstorm](https://github.com/OceanRamen/Brainstorm) created by [OceanRamen](https://github.com/OceanRamen) as well as [Immolate](https://github.com/SpectralPack/Immolate) please give credit to them as I have simply modified the hard work they did
 
+# /!\ Not compatible with macOS /!\
+
 ## Description
 This repository houses both the code for the brainstorm mod as well as the code for the C++ version of the Immolate seed finder. If you would like to create your own filters simply 
 add the code to the Immolate.cpp file, update the brainstorm endpoints to include whatever you need and then build it. This will generate a dll
 that you can then place in the mods folder of balatro. The brainstorm mod will automatically detect the dll and use it, though you will need to update the brainstorm.lua and ui.lua 
 in order to properly use your new options
-
-## Requirements for Brainstorm
-- [Lovely](https://github.com/ethangreen-dev/lovely-injector) injector -- Get it here: https://github.com/ethangreen-dev/lovely-injector/releases
-
-## Installation
-
-1. Install [Lovely](https://github.com/ethangreen-dev/lovely-injector) and follow the manual installation instructions.
-
-### Windows
-
-2. Download the [latest release](https://github.com/ABGamma/Brainstorm-Rerolled/releases) of Brainstorm-Rerolled.
-3. Unzip the file, and place it in `.../%appdata%/balatro/mods` -- Make sure the Mod's directory name is 'Brainstorm' [^1]
-4. Reload the game to activate the mod.
 
 ## Features
 ### Save-States
