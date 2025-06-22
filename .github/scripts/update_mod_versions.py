@@ -196,8 +196,7 @@ def process_mod(start_timestamp, name, meta_file):
         print("Download URL links to HEAD, checking latest commit...")
         source = VersionSource.HEAD
         new_version = get_version_string(VersionSource.HEAD, owner, repo, start_timestamp)
-    elif (("/releases/download/" in download_url and "/releases/latest/" not in download_url) or 
-        ("/releases/tag/" in download_url and "/releases/tag/latest" not in download_url)):
+    elif (meta.get('fixed-release-tag-updates') == True):
         print("Download URL links to specific tag, checking that tag...")
         source = VersionSource.SPECIFIC_TAG
         tag_data = {}
