@@ -27,14 +27,14 @@ def extract_repo_info(repo_url):
     return None, None
 
 VersionSource = Enum("VersionSource", [
-    ("RELEASE_TAG", "release"),
+    ("LATEST_TAG", "release"),
     ("HEAD", "commit"),
     ("SPECIFIC_TAG", "specific_tag"),
 ])
 def get_version_string(source: Enum, owner, repo, start_timestamp, n = 1, tag_data=None):
     """Get the version string from a given GitHub repo."""
     
-    if source is VersionSource.RELEASE_TAG:
+    if source is VersionSource.LATEST_TAG:
         url = f'https://api.github.com/repos/{owner}/{repo}/releases/latest'
     elif source is VersionSource.SPECIFIC_TAG:
         if not tag_data:
@@ -66,7 +66,7 @@ def get_version_string(source: Enum, owner, repo, start_timestamp, n = 1, tag_da
         if response.status_code == 200:
             data = response.json()
 
-            if source is VersionSource.RELEASE_TAG:
+            if source is VersionSource.LATEST_TAG:
                 # Return name of latest tag
                 return data.get('tag_name')
 
@@ -214,7 +214,7 @@ def process_mod(start_timestamp, name, meta_file):
         )
     else:
         print("Checking releases for latest version tag...")
-        source = VersionSource.RELEASE_TAG
+        source = VersionSource.LATEST_TAG
         new_version = get_version_string(source, owner, repo, start_timestamp)
 
         if not new_version:
