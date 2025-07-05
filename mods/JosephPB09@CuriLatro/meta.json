@@ -1,0 +1,12 @@
+{
+  "title": "CuriLatro",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["Resource Packs"],
+  "author": "JosephPB09 and Balatro fans",
+  "repo": "https://github.com/JosephPB0909/CuriLatro",
+  "downloadURL": "https://github.com/JosephPB0909/CuriLatro/archive/refs/tags/Mods.zip",
+  "folderName": "CuriLatro",
+  "version": "1.0",
+  "automatic-version-check": true
+}
