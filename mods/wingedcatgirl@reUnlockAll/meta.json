@@ -1,5 +1,6 @@
 {
   "title": "re:Unlock All",
+  "forderName":"reUnlockAll",
   "requires-steamodded": false,
   "requires-talisman": false,
   "categories": [
