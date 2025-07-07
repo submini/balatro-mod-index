@@ -58,7 +58,6 @@ This file stores essential metadata in JSON format. **Make sure you adhere to th
         - **Latest commit**: Using a link to the [latest commit (HEAD)](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#source-code-archive-urls)
 - *fixed-release-tag-updates*: (*Optional*) Set to `true` if your mod uses a fixed release tag and still wants to auto-update when modifying the underlying files. This can be useful for repositories with multiple mods, allowing you to have a release tag dedicated for each mod where you upload new versions. Note that:
   - Requires `automatic-version-check` to also be set to `true`.
-  - Requires that the `version` field is not set as the version will be extracted from the asset's upload date.
   - The `downloadURL` must point to a specific release asset using a link such as `https://github.com/author/repo/releases/download/my-release-tag/mod.zip`. 
  
  

@@ -61,7 +61,8 @@
     "categories",
     "author",
     "repo",
-    "downloadURL"
+    "downloadURL",
+    "version"
   ],
   "allOf": [
     {
@@ -120,13 +121,7 @@
         ]
       },
       "then": {
-        "$comment": "Conditions when 'fixed-release-tag-updates' is true)",
-        "not": {
-          "required": [
-            "version"
-          ],
-          "errorMessage": "When 'fixed-release-tag-updates' is true, the 'version' field must NOT be present as the version is extracted automatically."
-        },
+        "$comment": "Conditions when 'fixed-release-tag-updates' is true",
         "properties": {
           "automatic-version-check": {
             "const": true,
@@ -140,14 +135,7 @@
         "required": [
           "automatic-version-check"
         ],
-        "errorMessage": "When 'fixed-release-tag-updates' is true: 'version' must be absent, 'automatic-version-check' must be true, and 'downloadURL' must point to a specific release asset."
-      },
-      "else": {
-        "$comment": "Conditions when 'fixed-release-tag-updates' is false or absent",
-        "required": [
-          "version"
-        ],
-        "errorMessage": "When 'fixed-release-tag-updates' is false or absent, the 'version' field is required."
+        "errorMessage": "When 'fixed-release-tag-updates' 'automatic-version-check' must be true, and 'downloadURL' must point to a specific release asset."
       }
     }
   ]
