@@ -83,7 +83,7 @@ def get_version_string(source: Enum, owner, repo, start_timestamp, n = 1, tag_da
                     created_at = asset.get('created_at', '')
                     if created_at > latest_created_at:
                         latest_created_at = created_at
-                        latest_asset = asset.name
+                        latest_asset = asset['name']
 
                 # Convert 2099-12-31T01:02:03Z to 20991231_010203
                 parts = latest_created_at.replace('Z', '').split('T')
@@ -232,7 +232,7 @@ def process_mod(start_timestamp, name, meta_file):
 
     current_version = meta.get('version')
     # Update version if it changed
-    if current_version == new_version:
+    if not current_version or current_version == new_version:
         print(f"ℹ️ No version change for {name} (current: {current_version})")
         return
 
