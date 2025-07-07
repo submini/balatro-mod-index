@@ -196,22 +196,15 @@ def process_mod(start_timestamp, name, meta_file):
         print("Download URL links to HEAD, checking latest commit...")
         source = VersionSource.HEAD
         new_version = get_version_string(VersionSource.HEAD, owner, repo, start_timestamp)
-    elif (meta.get('fixed-release-tag-updates') == True):
+    elif (meta.get('fixed-release-tag-updates') == True) and "/releases/download/" in download_url:
         source = VersionSource.SPECIFIC_TAG
         tag_data = {}
         
-        if "/releases/download/" in download_url:
-            # Pattern: /releases/download/{tag}/{file} - tag is second-to-last
-            print("Download URL links to specific release asset, checking that asset's tag...")
-            tag_name = download_url.split('/')[-2]
-            print(f"Checking release tag: {tag_name}")
-            tag_data['name'] = tag_name
-        else:
-            # Pattern: /releases/tag/{tag} - tag is last
-            print("Download URL links to specific release tag, checking that tag...")
-            tag_name = download_url.split('/')[-1]
-            print(f"Checking release tag: {tag_name}")
-            tag_data['name'] = tag_name
+        # Pattern: /releases/download/{tag}/{file} - tag is second-to-last
+        print("Download URL links to specific release asset, checking that asset's tag...")
+        tag_name = download_url.split('/')[-2]
+        print(f"Checking release tag: {tag_name}")
+        tag_data['name'] = tag_name
 
         new_version = get_version_string(
             source, owner, repo, start_timestamp, tag_data=tag_data

@@ -80,10 +80,10 @@
             ]
           },
           {
-            "$comment": "'downloadURL' points to a specific release page or asset",
+            "$comment": "'downloadURL' points to a specific release asset",
             "properties": {
               "downloadURL": {
-                "pattern": "^https?://github\\.com/[^/]+/[^/]+/releases/(tag/[^/]+|download/[^/]+/.+)$"
+                "pattern": "^https?://github\\.com/[^/]+/[^/]+/releases/download/[^/]+/.+$"
               }
             },
             "required": [
@@ -105,7 +105,7 @@
           }
         ]
       },
-      "errorMessage": "When 'downloadURL' points to a specific GitHub release tag/asset AND 'automatic-version-check' is true, 'fixed-release-tag-updates' must also be true. This prevents accidental update freezing."
+      "errorMessage": "When 'downloadURL' points to a specific GitHub release asset AND 'automatic-version-check' is true, 'fixed-release-tag-updates' must also be true. This prevents accidental update freezing."
     },
     {
       "$comment": "This rule checks the value of 'fixed-release-tag-updates' and guarantees consistency",
@@ -133,14 +133,14 @@
             "errorMessage": "'automatic-version-check' must be true when 'fixed-release-tag-updates' is true."
           },
           "downloadURL": {
-            "pattern": "^https?://github\\.com/[^/]+/[^/]+/releases/(tag/[^/]+|download/[^/]+/.+)$",
-            "errorMessage": "When 'fixed-release-tag-updates' is true, 'downloadURL' must point to a specific GitHub release tag (e.g., '/releases/tag/v1.0.0') or a specific release asset (e.g., '/releases/download/v1.0.0/asset.zip'), NOT a branch head or latest release URL."
+            "pattern": "^https?://github\\.com/[^/]+/[^/]+/releases/download/[^/]+/.+$",
+            "errorMessage": "When 'fixed-release-tag-updates' is true, 'downloadURL' must point to a specific GitHub specific release asset (e.g., '/releases/download/v1.0.0/asset.zip'), NOT a branch head or latest release URL."
           }
         },
         "required": [
           "automatic-version-check"
         ],
-        "errorMessage": "When 'fixed-release-tag-updates' is true: 'version' must be absent, 'automatic-version-check' must be true, and 'downloadURL' must point to a specific release tag or asset."
+        "errorMessage": "When 'fixed-release-tag-updates' is true: 'version' must be absent, 'automatic-version-check' must be true, and 'downloadURL' must point to a specific release asset."
       },
       "else": {
         "$comment": "Conditions when 'fixed-release-tag-updates' is false or absent",
