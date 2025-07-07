@@ -232,7 +232,7 @@ def process_mod(start_timestamp, name, meta_file):
 
     current_version = meta.get('version')
     # Update version if it changed
-    if not current_version or current_version == new_version:
+    if current_version == new_version:
         print(f"ℹ️ No version change for {name} (current: {current_version})")
         return
 
