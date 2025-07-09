@@ -1,0 +1,12 @@
+{
+  "title": "Finn's Pokécards",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["Resource Packs"],
+  "author": "Finnaware",
+  "repo": "https://github.com/Finnaware/Finn-Pokecards",
+  "downloadURL": "https://github.com/Finnaware/Finn-Pokecards/archive/refs/heads/main.zip",
+  "folderName": "Kyu-latro!",
+  "version": "4.1.1",
+  "automatic-version-check": true
+}
