@@ -1,11 +1,11 @@
 {
   "title": "cokelatro",
   "requires-steamodded": true,
-  "requires-talisman": false,
+  "requires-talisman": true,
   "categories": ["Content"],
   "author": "cokeblock",
   "repo": "https://github.com/cokeblock/Cokelatro",
-  "downloadURL": "https://github.com/cokeblock/Cokelatro/releases/latest/download/source-code.zip",
+  "downloadURL": "https://github.com/cokeblock/Cokelatro/releases/download/2.5.1/cokelatro.2.5.1.zip",
   "folderName": "cokelatro",
   "version": "1.0.0",
   "automatic-version-check": true
