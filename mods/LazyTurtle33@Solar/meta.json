@@ -5,7 +5,7 @@
   "categories": ["Resource Packs"],
   "author": "LazyTurtle33",
   "repo": "https://github.com/TheLazyTurtle33/SolarBalatro",
-  "downloadURL": "https://github.com/TheLazyTurtle33/SolarBalatro/releases/download/release/Solar.zip",
+  "downloadURL": "https://github.com/TheLazyTurtle33/SolarBalatro/releases/latest/download/Solar.zip",
   "folderName": "Solar",
   "version": "1.0.0",
   "automatic-version-check": true
