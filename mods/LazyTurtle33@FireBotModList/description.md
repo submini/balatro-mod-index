@@ -4,7 +4,7 @@ This is a mod that will allow a firebot command to display your active mods.
 
 ## balatro
 
-Make sure you have [Steamodded](https://github.com/Steamodded/smods) and [lovly](https://github.com/ethangreen-dev/lovely-injector) installed.
+Make sure you have [Steamodded](https://github.com/Steamodded/smods) and [lovely](https://github.com/ethangreen-dev/lovely-injector) installed.
 Add BalatroFireBotModList to your mods folder and launch the game.
 You can test if it's working by opening a terminal and running:
 
