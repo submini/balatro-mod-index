@@ -1,13 +1,14 @@
 {
-    "title": "Lucky Rabbit",
-    "requires-steamodded": true,
-    "requires-talisman": false,
-    "categories": [
-        "Content"
-    ],
-    "author": "Fennex",
-    "repo": "https://github.com/Trif3ctal/Lucky-Rabbit",
-    "downloadURL": "https://github.com/Trif3ctal/Lucky-Rabbit/releases/latest",
-    "folderName": "LuckyRabbit",
-    "automatic-version-check": true
+  "title": "Lucky Rabbit",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": [
+    "Content"
+  ],
+  "author": "Fennex",
+  "repo": "https://github.com/Trif3ctal/Lucky-Rabbit",
+  "downloadURL": "https://github.com/Trif3ctal/Lucky-Rabbit/archive/refs/heads/main.zip",
+  "folderName": "LuckyRabbit",
+  "automatic-version-check": true,
+  "version": "43057bf"
 }
