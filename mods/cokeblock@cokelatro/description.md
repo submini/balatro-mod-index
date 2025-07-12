@@ -1,6 +1,6 @@
-Cokelatro is a collection of jokers
-mostly references to other media
 REQUIRES
 -steamodded
 -talisman
-!!DO NOT HOVER OVER THE JOKER "ANYTHING AND EVERYTHING" UNTIL YOU ARE IN THE GAME!!
+introducing cokelatro: a mod designed via entirely me and my friends
+this mod is all about references (primarily)
+this mod is kind of unbalanced lol
