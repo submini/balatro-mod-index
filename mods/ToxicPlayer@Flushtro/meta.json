@@ -1,0 +1,12 @@
+{
+  "title": "Flushtro",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["Joker"],
+  "author": "ToxicPlayer",
+  "repo": "https://github.com/joemama/extended-cards",
+  "downloadURL": "https://github.com/N0tToxicPlayer/Flushtro/releases/latest/flushtro.zip",
+  "folderName": "Flushtro",
+  "version": "1.1.0",
+  "automatic-version-check": true
+}
