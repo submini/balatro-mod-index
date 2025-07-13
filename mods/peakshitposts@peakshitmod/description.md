@@ -1,3 +1,3 @@
-Adds 9 new jokers with unique ablities
+Adds a bunch of new jokers with unique ablities
 most of them are references to things
 has some funny content you are sure to have a giggle
