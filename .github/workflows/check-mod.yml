@@ -149,12 +149,3 @@ jobs:
               fi
             fi
           done < changed_mods.txt
-
-  review-and-approve:
-    needs: validate # This job will only run after 'validate' completes successfully.
-    runs-on: ubuntu-latest
-    environment:
-      name: mod-review # This is the environment you created earlier.
-    steps:
-      - name: Await Approval from Maintainers
-        run: echo "Waiting for manual approval by maintainers..."
