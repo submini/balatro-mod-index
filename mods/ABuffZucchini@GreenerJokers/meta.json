@@ -1,0 +1,12 @@
+{
+  "title": "Greener Jokers",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": ["Content", "Joker"],
+  "author": "ABuffZucchini",
+  "repo": "https://github.com/ABuffZucchini/Greener-Jokers",
+  "downloadURL": "https://github.com/ABuffZucchini/Greener-Jokers/archive/refs/heads/main.zip",
+  "folderName": "Greener-Jokers",
+  "version": "1.0.0",
+  "automatic-version-check": true
+}
