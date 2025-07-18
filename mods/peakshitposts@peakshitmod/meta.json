@@ -8,7 +8,7 @@
   ],
   "author": "peakshitposts",
   "repo": "https://github.com/peakshitposts/peakshitmod",
-  "downloadURL": "https://github.com/peakshitposts/peakshitmod/archive/refs/tags/main.zip",
+  "downloadURL": "https://github.com/peakshitposts/peakshitmod/releases/latest/download/peakshitmod-main.zip",
   "folderName": "peakshitmod",
   "version": "main",
   "automatic-version-check": true
