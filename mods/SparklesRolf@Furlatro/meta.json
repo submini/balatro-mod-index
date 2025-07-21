@@ -2,12 +2,14 @@
   "title": "Furlatro",
   "requires-steamodded": true,
   "requires-talisman": true,
-  "categories": ["Content", "Joker"],
+  "categories": [
+    "Content",
+    "Joker"
+  ],
   "author": "SparklesRolf",
   "repo": "https://github.com/SparklesRolf/Furlatro",
   "downloadURL": "https://github.com/SparklesRolf/Furlatro/releases/latest/download/Furlatro.zip",
-
   "folderName": "Furlatro",
-  "version": "1.0.0",
+  "version": "Releases",
   "automatic-version-check": true
 }
