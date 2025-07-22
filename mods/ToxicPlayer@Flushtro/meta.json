@@ -1,7 +1,7 @@
 {
   "title": "Flushtro",
   "requires-steamodded": true,
-  "requires-talisman": false,
+  "requires-talisman": true,
   "categories": [
     "Joker"
   ],
@@ -9,6 +9,6 @@
   "repo": "https://github.com/N0tToxicPlayer/Flushtro",
   "downloadURL": "https://github.com/N0tToxicPlayer/Flushtro/releases/latest/download/flushtro.zip",
   "folderName": "Flushtro",
-  "version": "v1.1.1",
+  "version": "v2.1.0",
   "automatic-version-check": true
 }
