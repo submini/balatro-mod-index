@@ -7,8 +7,9 @@
     "Joker"
   ],
   "author": "InertSteak",
+  "folderName": "Pokermon",
   "repo": "https://github.com/InertSteak/Pokermon",
   "downloadURL": "https://github.com/InertSteak/Pokermon/archive/refs/heads/main.zip",
   "automatic-version-check": true,
-  "version": "dec158d"
+  "version": "a3a1774"
 }
