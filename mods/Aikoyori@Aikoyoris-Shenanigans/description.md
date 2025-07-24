@@ -1,5 +1,4 @@
-# Aikoyori's Shenanigans
-It's basically a content mod where I add whatever I feel like adding.
+Basically a content mod where I add whatever I feel like adding.
 
 The thumbnail is not doing this mod's justice because there are way more than what's there.
 
@@ -32,6 +31,9 @@ Oh.
 
 ## I wanted to ask if I can spell swear words when playing the so called Scrabble?
 That's for you to find out! Download now!
+
+## What if I have more questions?
+Feel free to ask in [Discord Server](https://discord.gg/JVg8Bynm7k) for the mod or open an issue!
 
 ## Credits
 `@larantula_j` on Discord for their Maxwell's Notebook contribution
