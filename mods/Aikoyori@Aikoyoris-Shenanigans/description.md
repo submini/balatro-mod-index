@@ -21,7 +21,7 @@ This mod features (as of time writing this)
 Yes, that's right, this mod features a "Balance" system (which is basically just Cryptid gameset in disguise) 
 where you can pick the number you want to play with depending on your mood!
 
-> Note: Absurd Balance (the likes of Cryptid) requires Talisman to be installed. Talisman is not essential if you want to play Adequate (Vanilla) Balance
+> Note: Absurd Balance (the likes of Cryptid) requires [Talisman](https://github.com/SpectralPack/Talisman) to be installed. Talisman is not essential if you want to play Adequate (Vanilla) Balance
 
 ## But...
 That's not it. This mod features a bunch of cross-mod content already from the likes of More Fluff, Card Sleeves, Partners, and more!
@@ -36,6 +36,8 @@ That's for you to find out! Download now!
 Feel free to ask in [Discord Server](https://discord.gg/JVg8Bynm7k) for the mod or open an issue!
 
 ## Credits
-`@larantula_j` on Discord for their Maxwell's Notebook contribution
+`@larantula_l` on Discord for their Maxwell's Notebook contribution
+
 @nh_6574 for his Card UI code 
+
 Balatro Discord for everything else
