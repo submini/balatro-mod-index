@@ -36,6 +36,8 @@ That's for you to find out! Download now!
 Feel free to ask in [Discord Server](https://discord.gg/JVg8Bynm7k) for the mod or open an issue!
 
 ## Credits
-`@larantula_j` on Discord for their Maxwell's Notebook contribution
+`@larantula_l` on Discord for their Maxwell's Notebook contribution
+
 @nh_6574 for his Card UI code 
+
 Balatro Discord for everything else
