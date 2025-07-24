@@ -8,5 +8,6 @@
   "author": "Aikoyori",
   "repo": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans",
   "downloadURL": "https://github.com/Aikoyori/Balatro-Aikoyoris-Shenanigans/archive/refs/heads/main.zip",
-  "automatic-version-check": true
+  "automatic-version-check": true,
+  "version": "713c523"
 }
