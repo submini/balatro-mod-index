@@ -1,0 +1,16 @@
+{
+  "title": "Goonlatro",
+  "requires-steamodded": true,
+  "requires-talisman": false,
+  "categories": [
+    "Content",
+    "Joker",
+    "Resource Packs"
+  ],
+  "author": "Goons Tower Defense",
+  "repo": "https://github.com/GoonsTowerDefense/Goonlatro",
+  "downloadURL": "https://github.com/GoonsTowerDefense/Goonlatro/archive/refs/heads/main.zip",
+  "folderName": "Goonlatro",
+  "version": "6a7d4d5",
+  "automatic-version-check": true
+}
