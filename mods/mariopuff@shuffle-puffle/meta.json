@@ -1,0 +1,17 @@
+{
+  "title": "Shuffle-Puffle",
+  "requires-steamodded": true,
+  "requires-talisman": true,
+  "categories": ["Content", "Jokers"],
+  "author": [
+    "mariopuff",
+    "UN4YA",
+    "interseer",
+    "CzarIsActual"
+],
+  "repo": "https://github.com/submini/shuffle-puffle",
+  "downloadURL": " ",
+  "folderName": "shuffle-puffle",
+  "version": "1",
+  "automatic-version-check": true
+}
